@@ -1,0 +1,30 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <app-header></app-header>
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav  #rightSidenav mode="side"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+                 <nav>
+                    <ul>
+                      <li><a href="">Project</a></li>
+                      <li><a href="">Admin</a></li>
+                      <li><a href="">Setting</a></li>
+                      <li><a href="">Attendance</a></li>
+                      <li><a href="">Report</a></li>
+                    </ul>
+                  </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
