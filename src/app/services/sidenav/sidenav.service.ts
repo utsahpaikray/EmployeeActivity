@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { MatSidenav } from '@angular/material';
-
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
 export class SidenavService {
-
   constructor() { }
   private sidenav: MatSidenav;
 
@@ -22,6 +21,7 @@ export class SidenavService {
   }
 
   public toggle(): void {
-  this.sidenav.toggle();
+    console.log(this.sidenav);
+    this.sidenav.toggle();
  }
 }
