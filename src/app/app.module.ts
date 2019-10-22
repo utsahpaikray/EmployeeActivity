@@ -37,8 +37,19 @@ import {
   PaypieComponent
 } from './component/project/paypie/paypie.component';
 import {
+  SlickpieComponent
+} from './component/project/slickpie/slickpie.component';
+import {
+  SingleledgerComponent
+} from './component/project/singleledger/singleledger.component';
+import {
+  AdminComponent
+} from './component/admin/admin/admin.component';
+
+import {
   LoginComponent
 } from './component/auth/login/login.component';
+
 import {
   SignupComponent
 } from './component/auth/signup/signup.component';
@@ -109,10 +120,12 @@ import {
   MatToolbarModule
 } from '@angular/material/toolbar';
 
-//services
+// services
 import {
   SidenavService
-} from '../app/services/sidenav/sidenav.service'
+} from '../app/services/sidenav/sidenav.service';
+import { MaincontentComponent } from '../app/component/maincontent/maincontent.component';
+
 
 
 
@@ -131,7 +144,13 @@ import {
     SignupComponent,
     MasterComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    MaincontentComponent,
+    SlickpieComponent,
+    SingleledgerComponent,
+    AdminComponent,
+    SettingsComponent,
+    AttendanceSheetComponent
   ],
   imports: [
     BrowserModule,

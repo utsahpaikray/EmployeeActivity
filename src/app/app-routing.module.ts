@@ -22,12 +22,24 @@ import {
 } from '../app/component/navbar/navbar.component';
 import {
   ReportComponent
-} from '../app/component/report/report.component'
+} from '../app/component/report/report.component';
+import {
+  MaincontentComponent
+} from './component/maincontent/maincontent.component';
+import { PaypieComponent } from './component/project/paypie/paypie.component';
+import { SlickpieComponent } from './component/project/slickpie/slickpie.component';
+import { SingleledgerComponent } from './component/project/singleledger/singleledger.component';
+import { AdminComponent } from './component/admin/admin/admin.component';
+import { SettingsComponent } from './component/settings/settings/settings.component';
+import {   AttendanceSheetComponent
+} from './component/attendance-sheet/attendance-sheet.component';
+
 
 const routes: Routes = [{
     path: 'login',
     component: LoginComponent
   },
+
   {
     path: 'register',
     component: SignupComponent
@@ -42,6 +54,39 @@ const routes: Routes = [{
         path: 'report',
         component: ReportComponent
       },
+       {
+        path: 'maincontent',
+        component: MaincontentComponent
+      },
+      {
+        path: 'paypie',
+        component: PaypieComponent
+      },
+      {
+        path: 'slickpie',
+        component:   SlickpieComponent
+
+      },
+      {
+        path: 'singleledger',
+        component: SingleledgerComponent
+
+
+      },
+      {
+        path: 'setting',
+        component: SettingsComponent
+      },
+      {
+        path: 'admin',
+        component: AdminComponent
+      },
+      {
+        path: 'attendancesheet',
+        component:   AttendanceSheetComponent
+
+      },
+
       {
         path: '',
         redirectTo: 'dashboard',

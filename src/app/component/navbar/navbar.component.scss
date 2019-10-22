@@ -1,4 +1,3 @@
-
 .example-container {
   display: flex;
   flex-direction: column;
@@ -14,14 +13,16 @@
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
 }
+
 .mat-toolbar.mat-primary {
-  background: #dd4814!important;
+  background: #dd4814 !important;
   color: #fff;
 }
+
 h1.example-app-name {
   margin-left: 8px;
   float: right;
-  width:100%;
+  width: 100%;
 }
 
 .example-sidenav-container {
@@ -35,26 +36,33 @@ h1.example-app-name {
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+mat-icon.icnon1.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  font-size: 16px;
+  text-align: right;
+}
 
-button.btn{
+button.btn {
   background-color: #dd4814;
   padding: 10px 20px;
   color: white;
   float: right;
-border: none;
-margin: 5px;
-border-radius: 3px;
-outline: none;
+  border: none;
+  margin: 5px;
+  border-radius: 3px;
+  outline: none;
 }
-.btn:hover{
+
+.btn:hover {
   background: #60e5ff;
 }
+
 button.icon {
   border: none;
   background: #0088a3;
   color: white;
 
 }
+
 mat-sidenav {
   width: 200px;
   background-color: #dd4814;
@@ -67,22 +75,40 @@ mat-sidenav {
 
 
 /* When you mouse over the navigation links, change their color */
-a {
-  color: white;
-  display: block;
-  padding: 15px 12px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  border-bottom: 1px solid #ffffff21;
-  font-family: sans-serif;
-  font-weight: 400;
-}
+// a {
+//   color: white;
+//   display: block;
+//   padding: 12px 3px;
+//   text-align: center;
+//   text-decoration: none;
+//   font-size: 15px;
+//   border-bottom: 1px solid #ffffff21;
+//   font-family: sans-serif;
+//   font-weight: 400;
+// }
 .hide{
-  display: none;
+  text-align: center;
+  font-size: 15px;
+}
+.mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
 }
 
-a::after{
+mat-icon.icnon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  font-size: 18px;
+  background: #f8855d;
+  border-radius: 50%;
+  padding: 8px;
+  /* margin: 0 auto; */
+  /* margin-top: 10px; */
+  margin-right: 6px;
+}
+
+a::after {
   content: "";
   height: 100%;
   left: 0;
@@ -94,7 +120,11 @@ a::after{
   z-index: -1;
 }
 
-a:hover{ border-bottom: 0px; color: #fff;}
+a:hover {
+  border-bottom: 0px;
+  color: #fff;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 
@@ -104,15 +134,15 @@ nav ul {
   padding: 0px;
 }
 
-nav li{
-	float: none;
+nav li {
+  float: none;
   width: 100%;
 }
 
-nav li a{
+nav li a {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 12px 18px;
   border-left: 5px solid;
   position: relative;
   z-index: 2;
@@ -123,12 +153,18 @@ nav li a{
   -webkit-box-sizing: border-box;
 }
 
-nav li a:hover{ border-bottom: 0px; color: #fff;}
-nav li:first-child a{ border-left: 10px solid #b33000; }
-nav li:nth-child(2) a{ border-left: 10px solid #b33000; }
-nav li:nth-child(3) a{ border-left: 10px solid #b33000; }
-nav li:nth-child(4) a{ border-left: 10px solid #b33000; }
-nav li:last-child a{ border-left: 10px solid #b33000; }
+.hide {
+  background: #fe875d;
+}
+
+nav li a:hover {
+  border-bottom: 0px;
+  color: #fff;
+}
+
+nav li a {
+  border-left: 10px solid #b33000;
+}
 
 nav li a:after {
   content: "";
@@ -142,10 +178,15 @@ nav li a:after {
   z-index: -1;
 }
 
-nav li a:hover:after{ width: 100%; }
-nav li:first-child a:after{ background: #b33000; }
-nav li:nth-child(2) a:after{ background: #b33000; }
-nav li:nth-child(3) a:after{ background: #b33000; }
-nav li:nth-child(4) a:after{ background: #b33000; }
-nav li:last-child a:after{ background:#b33000;}
+nav li a:hover:after {
+  width: 100%;
+}
 
+nav li a:after {
+  background: #b33000;
+}
+
+// nav li a:after{ background: #b33000; }
+// nav li a:after{ background: #b33000; }
+// nav li a:after{ background: #b33000; }
+// nav li a:after{ background:#b33000;}

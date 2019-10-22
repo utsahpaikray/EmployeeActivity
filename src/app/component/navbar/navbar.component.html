@@ -1,25 +1,41 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <app-header></app-header>
-  <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav  #rightSidenav mode="side"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-                 <nav>
-                    <ul>
-                      <li><a href="">Project</a></li>
-                      <li><a href="">Admin</a></li>
-                      <li><a href="">Setting</a></li>
-                      <li><a href="">Attendance</a></li>
-                      <li><a href="">Report</a></li>
-                    </ul>
-                  </nav>
+  <app-header></app-header>
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #rightSidenav mode="side" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <nav>
+        <ul>
+          <li (click)=toggleDisplay()><a [routerLink]="['./dashboard/']">
+              <mat-icon class="icnon"> phonelink_setup</mat-icon>Project
+            </a></li>
+          <li class="hide" [hidden]="isShow"><a [routerLink]="['./paypie/']">Paypie<mat-icon class="icnon1">
+                arrow_forward</mat-icon></a></li>
+          <li class="hide" [hidden]="isShow"><a [routerLink]="['./slickpie/']">Slick Pie<mat-icon class="icnon1">arrow_forward</mat-icon></a>
+          </li>
+          <li class="hide" [hidden]="isShow"><a [routerLink]="['./singleledger/']">Singl ledger<mat-icon class="icnon1">arrow_forward</mat-icon>
+              </a></li>
+          <li><a [routerLink]="['./admin/']">
+              <mat-icon class="icnon">group</mat-icon>Admin
+            </a></li>
+          <li><a [routerLink]="['./setting/']">
+              <mat-icon class="icnon">brightness_low</mat-icon>Setting
+            </a></li>
+          <li><a [routerLink]="['./attendancesheet/']">
+              <mat-icon class="icnon"> notes</mat-icon>Attendance
+            </a></li>
+          <li><a [routerLink]="['./report/']">
+              <mat-icon class="icnon"> pie_chart</mat-icon>Report
+            </a></li>
+
+        </ul>
+      </nav>
     </mat-sidenav>
     <mat-sidenav-content>
-
-
+      <router-outlet></router-outlet>
+      <!-- <app-maincontent></app-maincontent> -->
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+
 
 
 

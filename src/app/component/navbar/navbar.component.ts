@@ -11,6 +11,12 @@ import { MatSidenav } from '@angular/material';
 })
 
 export class NavbarComponent implements OnDestroy {
+  
+   isShow = true;
+ 
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
  // @ViewChild('rightSidenav') public sidenav: MatSidenav;
   @ViewChild('rightSidenav', { static: true }) sidenav: MatSidenav;
   // tslint:disable-next-line: variable-name
