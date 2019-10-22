@@ -8,19 +8,19 @@
   left: 0;
   right: 0;
 }
-mat-toolbar{
-  background: #34a3b8;
-  color: white;
-}
+
 .example-is-mobile .example-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
 }
-
+.mat-toolbar.mat-primary {
+  background: #dd4814!important;
+  color: #fff;
+}
 h1.example-app-name {
   margin-left: 8px;
-  float: left;
+  float: right;
   width:100%;
 }
 
@@ -37,10 +37,10 @@ h1.example-app-name {
 }
 
 button.btn{
-  background-color: #007188;
+  background-color: #dd4814;
   padding: 10px 20px;
   color: white;
-  float: left;
+  float: right;
 border: none;
 margin: 5px;
 border-radius: 3px;
@@ -57,7 +57,7 @@ button.icon {
 }
 mat-sidenav {
   width: 200px;
-  background-color: #34a3b8;
+  background-color: #dd4814;
   color: white;
 }
 
@@ -124,11 +124,11 @@ nav li a{
 }
 
 nav li a:hover{ border-bottom: 0px; color: #fff;}
-nav li:first-child a{ border-left: 10px solid #007a92; }
-nav li:nth-child(2) a{ border-left: 10px solid #007a92; }
-nav li:nth-child(3) a{ border-left: 10px solid #007a92; }
-nav li:nth-child(4) a{ border-left: 10px solid #007a92; }
-nav li:last-child a{ border-left: 10px solid #007a92; }
+nav li:first-child a{ border-left: 10px solid #b33000; }
+nav li:nth-child(2) a{ border-left: 10px solid #b33000; }
+nav li:nth-child(3) a{ border-left: 10px solid #b33000; }
+nav li:nth-child(4) a{ border-left: 10px solid #b33000; }
+nav li:last-child a{ border-left: 10px solid #b33000; }
 
 nav li a:after {
   content: "";
@@ -143,10 +143,9 @@ nav li a:after {
 }
 
 nav li a:hover:after{ width: 100%; }
-nav li:first-child a:after{ background: #007a92; }
-nav li:nth-child(2) a:after{ background: #007a92; }
-nav li:nth-child(3) a:after{ background: #007a92; }
-nav li:nth-child(4) a:after{ background: #007a92; }
-nav li:last-child a:after{ background: #007a92; }
-
+nav li:first-child a:after{ background: #b33000; }
+nav li:nth-child(2) a:after{ background: #b33000; }
+nav li:nth-child(3) a:after{ background: #b33000; }
+nav li:nth-child(4) a:after{ background: #b33000; }
+nav li:last-child a:after{ background:#b33000;}
 

@@ -1,1 +1,43 @@
-<p>signup works!</p>
+<app-header></app-header>
+<div class="main">
+  <div class="conatiner">
+    <div class="Wrapper">
+      <div class="signuppage">      <h2 style="color:red"> Please Signup or Login</h2>
+      <form class="example-form">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="First name">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Last Name">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+          <tr>
+            <input matInput placeholder="Email">
+            </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="signup">Signup</button>
+        <a [routerLink]="['/login/']" class="login-link">Login</a>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
