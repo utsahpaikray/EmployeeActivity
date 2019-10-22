@@ -44,23 +44,23 @@ span.ng-tns-c3-0.ng-star-inserted {
     font-size: 19px;
     border-radius: 3px;
     color: white;
+    display: block;
+
 }
 .login-link{
-  background-color: #dd4814;
-  padding:  15px;
-  color: white;
-border: none;
-margin: 5px;
-border-radius: 3px;
-outline: none;
-text-decoration: none;
-
-
+margin-top: 20px;
+color: #dd4814;
 }
 .signuppage {
-
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -32%);
+  background: white;
+  padding: 41px;
+  border: 2px solid #dd4814;
+  box-shadow: -1px 1px 8px #00000078;
+}
+td.block {
+  display: block;
 }
