@@ -36,7 +36,8 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 //services
-import { SidenavService } from '../app/services/sidenav/sidenav.service'
+import { SidenavService } from '../app/services/sidenav/sidenav.service';
+
 
 
 
