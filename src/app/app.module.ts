@@ -18,9 +18,7 @@ import {
 import {
   DashboardComponent
 } from './component/dashboard/dashboard.component';
-import {
-  SuperAdminComponent
-} from './component/admin/user-admin/super-admin.component';
+
 import {
   SettingsComponent
 } from './../app/component/settings/settings/settings.component';
@@ -125,8 +123,10 @@ import {
   SidenavService
 } from '../app/services/sidenav/sidenav.service';
 import { MaincontentComponent } from '../app/component/maincontent/maincontent.component';
-
-
+import { EmployeelistComponent } from './component/employeelist/employeelist.component';
+import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
+import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -150,7 +150,9 @@ import { MaincontentComponent } from '../app/component/maincontent/maincontent.c
     SingleledgerComponent,
     AdminComponent,
     SettingsComponent,
-    AttendanceSheetComponent
+    AttendanceSheetComponent,
+    EmployeelistComponent,
+    TaskmanagerComponent
   ],
   imports: [
     BrowserModule,
@@ -162,7 +164,10 @@ import { MaincontentComponent } from '../app/component/maincontent/maincontent.c
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatCardModule
   ],
   providers: [SidenavService],
   bootstrap: [AppComponent]

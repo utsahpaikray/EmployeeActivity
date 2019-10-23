@@ -33,9 +33,13 @@ import { AdminComponent } from './component/admin/admin/admin.component';
 import { SettingsComponent } from './component/settings/settings/settings.component';
 import {   AttendanceSheetComponent
 } from './component/attendance-sheet/attendance-sheet.component';
+import {   EmployeelistComponent
+} from './component/employeelist/employeelist.component';
+import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
+import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
 
-
-const routes: Routes = [{
+const routes: Routes = [
+  {
     path: 'login',
     component: LoginComponent
   },
@@ -82,9 +86,22 @@ const routes: Routes = [{
         component: AdminComponent
       },
       {
+        path: 'superadmin',
+        component: SuperAdminComponent
+      },
+
+      {
         path: 'attendancesheet',
         component:   AttendanceSheetComponent
 
+      },
+      {
+        path: 'employeelist',
+        component: EmployeelistComponent
+      },
+      {
+        path: 'taskmanager',
+        component: TaskmanagerComponent
       },
 
       {
@@ -95,7 +112,8 @@ const routes: Routes = [{
       {
         path: '**',
         redirectTo: 'dashboard'
-      }
+      },
+
 
     ],
     component: MasterComponent

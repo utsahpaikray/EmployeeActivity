@@ -7,38 +7,44 @@
   left: 0;
   right: 0;
 }
-
 .example-is-mobile .example-toolbar {
   position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
 }
-
 .mat-toolbar.mat-primary {
   background: #dd4814 !important;
   color: #fff;
 }
-
 h1.example-app-name {
   margin-left: 8px;
   float: right;
   width: 100%;
 }
-
+a.links {
+  text-align: end;
+}
 .example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
 }
-
 .example-is-mobile .example-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
+
   flex: 1 0 auto;
 }
 mat-icon.icnon1.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 6px;
+  background: #f2754a;
+  margin-left: 10px;
+}
+ul.Navbar {
   font-size: 16px;
-  text-align: right;
+}
+
+ul.hideshow.ng-star-inserted {
+  background: #f2754a;
+  font-size: 13px;
 }
 
 button.btn {
@@ -51,16 +57,20 @@ button.btn {
   border-radius: 3px;
   outline: none;
 }
-
+.mat-icon[_ngcontent-foh-c2] {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 18px;
+  width: 18px;
+}
 .btn:hover {
   background: #60e5ff;
 }
-
 button.icon {
   border: none;
   background: #0088a3;
   color: white;
-
 }
 
 mat-sidenav {
@@ -68,46 +78,38 @@ mat-sidenav {
   background-color: #dd4814;
   color: white;
 }
-
-
-
-/* The navigation menu links */
-
-
-/* When you mouse over the navigation links, change their color */
-// a {
-//   color: white;
-//   display: block;
-//   padding: 12px 3px;
-//   text-align: center;
-//   text-decoration: none;
-//   font-size: 15px;
-//   border-bottom: 1px solid #ffffff21;
-//   font-family: sans-serif;
-//   font-weight: 400;
-// }
-.hide{
+.Navbar1 {
+  display: none;
+}
+.navbar:hover+.Navbar1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+.hide {
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 .mat-icon {
   background-repeat: no-repeat;
   display: inline-block;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
 }
-
 mat-icon.icnon.mat-icon.notranslate.material-icons.mat-icon-no-color {
-  font-size: 18px;
+  font-size: 16px;
   background: #f8855d;
   border-radius: 50%;
-  padding: 8px;
+  padding: 6px;
   /* margin: 0 auto; */
   /* margin-top: 10px; */
   margin-right: 6px;
+  text-align: center;
 }
-
 a::after {
   content: "";
   height: 100%;
@@ -119,26 +121,19 @@ a::after {
   -webkit-transition: all 0.3s ease 0s;
   z-index: -1;
 }
-
 a:hover {
   border-bottom: 0px;
   color: #fff;
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-
 nav ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
-
 nav li {
   float: none;
   width: 100%;
 }
-
 nav li a {
   display: block;
   width: 100%;
@@ -161,11 +156,9 @@ nav li a:hover {
   border-bottom: 0px;
   color: #fff;
 }
-
 nav li a {
   border-left: 10px solid #b33000;
 }
-
 nav li a:after {
   content: "";
   height: 100%;
@@ -177,16 +170,23 @@ nav li a:after {
   -webkit-transition: all 0.3s ease 0s;
   z-index: -1;
 }
+.mat-drawer {
+  position: relative;
+  z-index: 4;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  outline: 0;
+  box-sizing: border-box;
+  transform: translate3d(-100%, 0, 0);
+}
 
 nav li a:hover:after {
   width: 100%;
 }
-
 nav li a:after {
   background: #b33000;
 }
 
-// nav li a:after{ background: #b33000; }
-// nav li a:after{ background: #b33000; }
-// nav li a:after{ background: #b33000; }
-// nav li a:after{ background:#b33000;}

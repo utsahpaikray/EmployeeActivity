@@ -3,11 +3,18 @@
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #rightSidenav mode="side" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <nav>
-        <ul>
-          <li (click)=toggleDisplay()><a [routerLink]="['./dashboard/']">
-              <mat-icon class="icnon"> phonelink_setup</mat-icon>Project
-            </a></li>
-          <li class="hide" [hidden]="isShow"><a [routerLink]="['./paypie/']">Paypie<mat-icon class="icnon1">
+        <ul class="Navbar" (click)=toggleDisplay()>
+          <li  *ngFor="let item of items"><a [routerLink]=[item.link] >
+              <mat-icon class="icnon"> {{item.icon}}</mat-icon>
+              {{item.name}} </a>
+              <ul *ngIf="item.children" class="hideshow">
+                <li  *ngFor="let child of item.children"  [hidden]="isShow"><a [routerLink]=[child.link] class="links">
+
+                  {{child.name}}<mat-icon class="icnon1"> {{child.icon}}</mat-icon> </a>
+              </li>
+              </ul>
+          </li>
+          <!-- <li class="hide" [hidden]="isShow"><a >Paypie<mat-icon class="icnon1">
                 arrow_forward</mat-icon></a></li>
           <li class="hide" [hidden]="isShow"><a [routerLink]="['./slickpie/']">Slick Pie<mat-icon class="icnon1">arrow_forward</mat-icon></a>
           </li>
@@ -27,6 +34,30 @@
             </a></li>
 
         </ul>
+        <ul class="Navbar">
+            <li (click)=toggleDisplay()><a [routerLink]="['./dashboard/']">
+                <mat-icon class="icnon"> phonelink_setup</mat-icon>Project
+              </a></li>
+            <li class="hide" [hidden]="isShow"><a [routerLink]="['./paypie/']">Paypie<mat-icon class="icnon1">
+                  arrow_forward</mat-icon></a></li>
+            <li class="hide" [hidden]="isShow"><a [routerLink]="['./slickpie/']">Slick Pie<mat-icon class="icnon1">arrow_forward</mat-icon></a>
+            </li>
+            <li class="hide" [hidden]="isShow"><a [routerLink]="['./singleledger/']">Singl ledger<mat-icon class="icnon1">arrow_forward</mat-icon>
+                </a></li>
+            <li><a [routerLink]="['./admin/']">
+                <mat-icon class="icnon">group</mat-icon>Admin
+              </a></li>
+            <li><a [routerLink]="['./setting/']">
+                <mat-icon class="icnon">brightness_low</mat-icon>Setting
+              </a></li>
+            <li><a [routerLink]="['./attendancesheet/']">
+                <mat-icon class="icnon"> notes</mat-icon>Attendance
+              </a></li>
+            <li><a [routerLink]="['./report/']">
+                <mat-icon class="icnon"> pie_chart</mat-icon>Report
+              </a></li> -->
+
+          </ul>
       </nav>
     </mat-sidenav>
     <mat-sidenav-content>
