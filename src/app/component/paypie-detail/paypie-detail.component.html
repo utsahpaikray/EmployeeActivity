@@ -1,0 +1,28 @@
+<div class="container">
+<div cdkDropListGroup>
+  <div class="example-container">
+
+    <h2>Sprint1</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="sprint2"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of sprint2" cdkDrag>{{item.task}} {{item.assign}} {{item.Status}}</div>
+    </div>
+
+
+  </div>
+
+  <div class="example-container">
+    <h2>Sprint2</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="sprint1"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of sprint1" cdkDrag>{{item.task}} {{item.assign}} {{item.Status}}</div>
+    </div>
+  </div>
+</div>

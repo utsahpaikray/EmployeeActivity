@@ -1,0 +1,26 @@
+.container{
+  width: 100%;
+
+}
+.row{
+display: flex;
+
+}
+.example-card {
+  max-width: 25%;
+  margin:5px;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-image: url('/assets/img/paypie-logo.png');
+  background-size: cover;
+}
+.example-header-image1 {
+  background-image: url('/assets/img/singleledger.jpg');
+  background-size: cover;
+}
+.example-header-image2 {
+  background-image: url('/assets/img/slickpie.png');
+  background-size: cover;
+}

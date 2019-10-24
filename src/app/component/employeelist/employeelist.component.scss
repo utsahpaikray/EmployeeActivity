@@ -21,6 +21,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example-element-detail {
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 .example-element-diagram {
@@ -55,7 +56,13 @@ tr.example-element-row:not(.example-expanded-row):active {
 table th,td{
   text-align: center;
 }
-.example-card {
-  max-width: 250px;
+.example-card[_ngcontent-lwy-c9] {
+  max-width: 255px;
+  width: 300p;
+  min-width: 218px;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: -3px 2px 7px 2px rgba(0,0,0,.2), 2px 0px 7px 2px rgba(0,0,0,.14), 2px 0px 3px 0 rgba(0,0,0,.12);
+  padding: 24px 98px;
 }
 

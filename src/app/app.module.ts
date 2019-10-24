@@ -117,6 +117,8 @@ import {
 import {
   MatToolbarModule
 } from '@angular/material/toolbar';
+import { FooterComponent } from '../app/component/shared/footer/footer.component';
+import { NavComponent } from '../app/component/shared/nav/nav.component';
 
 // services
 import {
@@ -127,8 +129,9 @@ import { EmployeelistComponent } from './component/employeelist/employeelist.com
 import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
 import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
 import {MatCardModule} from '@angular/material/card';
-
-
+import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -152,7 +155,10 @@ import {MatCardModule} from '@angular/material/card';
     SettingsComponent,
     AttendanceSheetComponent,
     EmployeelistComponent,
-    TaskmanagerComponent
+    TaskmanagerComponent,
+    FooterComponent,
+    NavComponent,
+    PaypieDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -167,7 +173,9 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    DragDropModule,
+    MatExpansionModule
   ],
   providers: [SidenavService],
   bootstrap: [AppComponent]

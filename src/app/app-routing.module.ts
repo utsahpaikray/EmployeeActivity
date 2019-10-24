@@ -37,7 +37,7 @@ import {   EmployeelistComponent
 } from './component/employeelist/employeelist.component';
 import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
 import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
-
+import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -103,6 +103,10 @@ const routes: Routes = [
         path: 'taskmanager',
         component: TaskmanagerComponent
       },
+      {
+        path: 'paypie-detail',
+        component: PaypieDetailComponent
+      },
 
       {
         path: '',
@@ -113,6 +117,7 @@ const routes: Routes = [
         path: '**',
         redirectTo: 'dashboard'
       },
+
 
 
     ],
@@ -127,9 +132,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'register'
   }
-
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -31,14 +31,14 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     name: 'John',
-    designation: 'Hydrogen',
+    designation: 'Angular developer',
     experience: 1,
     behaviour: 'H',
     description: `Hydrogen is a chemical element with behaviour H and atomic number 1. With a standard
-        atomic experience of 1.008, hydrogen is the lightest element on the periodic table.`
+      atomic experience of 1.008, hydrogen is the lightest element on the periodic table.`
   }, {
     name: 'John',
-    designation: 'Helium',
+    designation: 'Web designer',
     experience: 4,
     behaviour: 'He',
     description: `Helium is a chemical element with behaviour He and atomic number 2. It is a
@@ -46,7 +46,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         group in the periodic table. Its boiling point is the lowest among all the elements.`
   }, {
     name: 'John',
-    designation: 'Lithium',
+    designation: 'Graphics designer',
     experience: 6,
     behaviour: 'Li',
     description: `Lithium is a chemical element with behaviour Li and atomic number 3. It is a soft,
@@ -54,7 +54,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         lightest solid element.`
   }, {
     name:'John',
-    designation: 'Beryllium',
+    designation: 'Web designer',
     experience: 9,
     behaviour: 'Be',
     description: `Beryllium is a chemical element with behaviour Be and atomic number 4. It is a
@@ -62,7 +62,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         larger atomic nuclei that have collided with cosmic rays.`
   }, {
     name: 'John',
-    designation: 'Boron',
+    designation: 'Php Developer',
     experience: 10,
     behaviour: 'B',
     description: `Boron is a chemical element with behaviour B and atomic number 5. Produced entirely
@@ -70,7 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         low-abundance element in the Solar system and in the Earth's crust.`
   }, {
     name:'John',
-    designation: 'Carbon',
+    designation: 'Angular developer',
     experience: 12,
     behaviour: 'C',
     description: `Carbon is a chemical element with behaviour C and atomic number 6. It is nonmetallic
@@ -85,7 +85,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         discovered and isolated by Scottish physician Daniel Rutherford in 1772.`
   }, {
     name: 'John',
-    designation: 'Oxygen',
+    designation: 'Angular developer',
     experience: 15,
     behaviour: 'O',
     description: `Oxygen is a chemical element with behaviour O and atomic number 8. It is a member of
@@ -93,7 +93,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
          agent that readily forms oxides with most elements as well as with other compounds.`
   }, {
     name: 'John',
-    designation: 'Fluorine',
+    designation: 'Web designer',
     experience: 18,
     behaviour: 'F',
     description: `Fluorine is a chemical element with behaviour F and atomic number 9. It is the
