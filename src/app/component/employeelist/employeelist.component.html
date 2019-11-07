@@ -1,11 +1,18 @@
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
 <div class="container">
 <div class="row">
   <table mat-table
   [dataSource]="dataSource" multiTemplateDataRows
-  class="mat-elevation-z8">
-<ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
-<th mat-header-cell *matHeaderCellDef> {{column}} </th>
-<td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  class="mat-elevation-z8"  >
+<ng-container matColumnDef="{{column}}"  *ngFor="let column of columnsToDisplay" >
+  <tr>
+<th mat-header-cell *matHeaderCellDef > {{column}} </th>
+<td mat-cell *matCellDef="let element"  [appColor]="color" defaultColor="red"> {{element[column]}} </td>
+</tr>
 </ng-container>
 
 <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->

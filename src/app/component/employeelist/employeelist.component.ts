@@ -19,6 +19,8 @@ export class EmployeelistComponent {
   dataSource = ELEMENT_DATA;
   columnsToDisplay = ['name', 'designation', 'experience', 'behaviour'];
   expandedElement: PeriodicElement | null;
+  color: string;
+
 }
 
 export interface PeriodicElement {
@@ -53,7 +55,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         silvery-white alkali metal. Under standard conditions, it is the lightest metal and the
         lightest solid element.`
   }, {
-    name:'John',
+    name: 'John',
     designation: 'Web designer',
     experience: 9,
     behaviour: 'Be',
@@ -69,7 +71,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a
         low-abundance element in the Solar system and in the Earth's crust.`
   }, {
-    name:'John',
+    name: 'John',
     designation: 'Angular developer',
     experience: 12,
     behaviour: 'C',

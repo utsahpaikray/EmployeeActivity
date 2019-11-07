@@ -132,6 +132,10 @@ import {MatCardModule} from '@angular/material/card';
 import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ColorDirective } from './color.directive';
+import { UpperletterPipe } from './upperletter.pipe';
+import { LetterComponent } from './letter/letter.component';
+import { CashflowComponent } from './component/cashflow/cashflow.component';
 
 @NgModule({
   declarations: [
@@ -158,7 +162,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     TaskmanagerComponent,
     FooterComponent,
     NavComponent,
-    PaypieDetailComponent
+    PaypieDetailComponent,
+    ColorDirective,
+    UpperletterPipe,
+    LetterComponent,
+    CashflowComponent,
+
   ],
   imports: [
     BrowserModule,

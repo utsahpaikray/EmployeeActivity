@@ -1,23 +1,27 @@
 <div class="container">
   <div class="row">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Paypie</mat-card-title>
-        <mat-card-subtitle>Paypie Detail</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="assets/img/paypie.png" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button><h4 [routerLink]="['/master/paypie-detail']">Detail</h4></button>
-      </mat-card-actions>
-    </mat-card>
+      <div class="outer-container paypie">
+        <div class=" small expand">
+          <mat-card class="example-card ">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Paypie</mat-card-title>
+              <mat-card-subtitle>Paypie Detail</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="assets/img/paypie.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+               
+            </mat-card-actions>
+          </mat-card>
+       </div>
+      </div>
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image1"></div>
@@ -33,7 +37,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button><h4>Detail</h4></button>
+        <button mat-button ><h4>Expand</h4></button>
 
       </mat-card-actions>
     </mat-card>
@@ -52,7 +56,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button><h4>Detail</h4></button>
+        <button mat-button><h4>Expand</h4></button>
 
       </mat-card-actions>
     </mat-card>

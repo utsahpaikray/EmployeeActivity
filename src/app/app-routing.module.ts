@@ -38,6 +38,7 @@ import {   EmployeelistComponent
 import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
 import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
 import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
+import { CashflowComponent } from './component/cashflow/cashflow.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -57,6 +58,10 @@ const routes: Routes = [
       {
         path: 'report',
         component: ReportComponent
+      },
+      {
+        path: 'cashflow',
+        component: CashflowComponent
       },
        {
         path: 'maincontent',

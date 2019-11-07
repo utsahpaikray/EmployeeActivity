@@ -1,26 +1,73 @@
-.container{
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
   width: 100%;
 
 }
-.row{
-display: flex;
+
+.row {
+  display: flex;
 
 }
+button.mat-button.mat-button-base {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .example-card {
-  max-width: 25%;
-  margin:5px;
+  max-width: 25vw;
+  margin: 5px;
   margin: 0 auto;
+  transition: 1s;
+
 }
 
 .example-header-image {
   background-image: url('/assets/img/paypie-logo.png');
   background-size: cover;
 }
+
 .example-header-image1 {
   background-image: url('/assets/img/singleledger.jpg');
   background-size: cover;
 }
+
 .example-header-image2 {
   background-image: url('/assets/img/slickpie.png');
   background-size: cover;
+}
+
+.parent-expand {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #268e97;
+  transition: 1s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  overflow: auto;
+
+  .example-card {
+    max-width: 100%;
+    margin: 5px;
+    margin: 0 auto;
+    transition: 1s;
+
+  }
+}
+
+.parent-expand .small {
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
+
+  transition: 1s;
+  z-index: 2;
+  padding: 20px;
 }
