@@ -5,7 +5,9 @@
     width: 100%;
     margin: 0 auto;
     background:#e8e8e8 0% 0% no-repeat padding-box;
-
+    border: 1px solid #D2D2D2;
+    border-radius: 20px;
+    // overflow: hidden;
     .main-table {
       margin-top: 22px;
   }
@@ -366,7 +368,7 @@ border-collapse: collapse;
     font-size: 11px;
 }
 td.td4 {
-  height: 34px;
+  height: 38px;
 }
 td.td2 {
   font-size: 12px;
@@ -380,7 +382,7 @@ td.td3 {
 }
 
 span.space12 {
-  padding: 15px 32px;
+  padding: 5px 32px;
   color: #00A3B8;
   font-size: 14px;
 }
@@ -388,6 +390,7 @@ td.td5 {
   color: #005058;
   font-size: 13px;
   font-weight: 500;
+  background: #e8e8e8;
 }
 td.charts {
   padding-left: 39px;
@@ -423,6 +426,61 @@ td.td1{
 }
 td.td7 {
   width: 343px;
+}
+
+.fix{
+  position:sticky;
+  left: 0;
+  right: 0;
+  background: #e8e8e8 0% 0% no-repeat padding-box;
+font-size: 13px;
+  z-index: 0;
+}
+
+.arrow{
+  padding-left: 40px;
+  font-size: 16px;
+}
+// .scroll{
+//   overflow-x: auto;
+//  max-width: 1000px;
+
+//   overflow-y: hidden;
+// }
+tr.fix {
+  height: 34px;
+}
+span.space12.border {
+  border-bottom: 2px solid #00A3B8;
+  /* margin-left: 20px; */
+  /* border: 2px solid #00A3B8; */
+}
+// .dollar{
+//   position: relative;
+//   z-index: -1;
+// }
+.All-detial{
+display: flex;
+}
+td.td2 {
+  background: #e8e8e8;
+}
+td.td3{
+  background: #e8e8e8;
+}
+tr.height {
+  height: 35px;
+}
+.acc{
+ background:  #e8e8e8;
+}
+// .topfix{
+//   position: sticky;
+//   top: 0;
+//   background: #e8e8e8;
+// }
+td.td4 {
+  background: #e8e8e8;
 }
 }
 }
