@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-cashflow',
@@ -11,5 +11,8 @@ export class CashflowComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event) {
+    console.debug("Scroll Event");
+  }
 }

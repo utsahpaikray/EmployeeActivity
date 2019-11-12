@@ -1,0 +1,69 @@
+{
+    openingBalance:[{date:12/10/2019,12/10/2019,12/10/2019,12/10/2019,12/10/2019,12/10/2019,12/10/2019,}],
+    cashType:[
+            {
+                name:cashIn,
+                type:[
+                    {
+                        name:'account receivable',
+                        CoaData:[
+                            name:aBC,
+                            {
+                                cUSTOMEnaME:[{
+                                    NAME:AVC,
+                                    DATA:[{$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33}],
+                                }]
+                            }
+                            ]
+
+                    },
+                    {
+                        name:'Income',
+                        CoaData:[
+                            name:aBC,
+                            {
+                                cUSTOMEnaME:[{
+                                    NAME:DAS,
+                                    DATA:[{$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33}],
+                                }]
+                            }
+                            ]
+
+                    }
+                    {}
+                    ]
+            },
+        {
+            name:cashOut,
+            type:[
+                {
+                    name:'account Payable',
+                    CoaData:[
+                        name:aBC,
+                        {
+                            cUSTOMEnaME:[{
+                                NAME:AVC,
+                                DATA:[{$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33}],
+                            }]
+                        }
+                        ]
+
+                },
+                 {
+                    name:'Expense',
+                    CoaData:[
+                        name:aBC,
+                        {
+                            cUSTOMEnaME:[{
+                                NAME:DAS,
+                                DATA:[{$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33,$15654.33}],
+                            }]
+                        }
+                        ]
+
+                }
+                {}
+                ]
+        }
+    {}]
+}
