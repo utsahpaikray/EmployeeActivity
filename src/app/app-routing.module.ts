@@ -38,7 +38,8 @@ import {   EmployeelistComponent
 import { TaskmanagerComponent } from './component/taskmanager/taskmanager.component';
 import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
 import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
-import { CashflowComponent } from './component/cashflow/cashflow.component'
+import { CashflowComponent } from './component/cashflow/cashflow.component';
+import { CashflowtableComponent } from './cashflowtable/cashflowtable.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -77,8 +78,13 @@ const routes: Routes = [
 
       },
       {
-        path: 'singleledger',
-        component: SingleledgerComponent
+        path: 'slickpie',
+        component:   SlickpieComponent
+
+      },
+      {
+        path: 'cashflowtable',
+        component: CashflowtableComponent
 
 
       },

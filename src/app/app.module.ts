@@ -136,6 +136,7 @@ import { ColorDirective } from './color.directive';
 import { UpperletterPipe } from './upperletter.pipe';
 import { LetterComponent } from './letter/letter.component';
 import { CashflowComponent } from './component/cashflow/cashflow.component';
+import { CashflowtableComponent } from './cashflowtable/cashflowtable.component';
 
 @NgModule({
   declarations: [
@@ -167,6 +168,7 @@ import { CashflowComponent } from './component/cashflow/cashflow.component';
     UpperletterPipe,
     LetterComponent,
     CashflowComponent,
+    CashflowtableComponent,
 
   ],
   imports: [
