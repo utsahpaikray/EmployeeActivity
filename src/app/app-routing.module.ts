@@ -39,7 +39,9 @@ import { TaskmanagerComponent } from './component/taskmanager/taskmanager.compon
 import { SuperAdminComponent } from './component/admin/user-admin/super-admin.component';
 import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.component';
 import { CashflowComponent } from './component/cashflow/cashflow.component';
-import { CashflowtableComponent } from './cashflowtable/cashflowtable.component';
+import { CashflowtableComponent } from './cashflow/cashflowtable/cashflowtable.component';
+// tslint:disable-next-line: max-line-length
+import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -59,6 +61,10 @@ const routes: Routes = [
       {
         path: 'report',
         component: ReportComponent
+      },
+      {
+        path: 'dialogbox',
+        component: DialogDialogOverviewExampleDialogComponent
       },
       {
         path: 'cashflow',

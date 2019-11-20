@@ -1,0 +1,47 @@
+<div class="container">
+<div class="detail">
+    <div class="qb-detail">
+      <h4 class="text border">QB Invoice detail:-</h4>
+      <p class="text">chart of account: Account-Receivable</p>
+      <p class="text">Customer name: Shaun"s Brid </p>
+    </div>
+</div>
+<div class="defaultTable sec-drilldown" id="sec-drilldown">
+  <table class="dataTable">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+
+        <th>Description</th>
+        <th>Invoice No</th>
+        <th>Due Date</th>
+        <th>Paid Date</th>
+        <th >Amount</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of dialogtable;">
+        <tr>
+          <td></td>
+
+          <td>{{item.AccountName}}</td>
+          <td>{{item.Num}}</td>
+          <td>{{item.Description}}</td>
+          <td>{{item.DueDate}}</td>
+          <td>{{item.Date}}</td>
+          <td>{{item.Amount}}</td>
+
+          <td></td>
+
+
+        </tr>
+      </ng-container>
+      <tr *ngIf="dialogtable.length==0">
+        <td colspan="5" style="text-align:center;color:#969696;">No Records Found</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

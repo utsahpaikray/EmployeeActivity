@@ -4,7 +4,7 @@ import {
 import {
   NgModule
 } from '@angular/core';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 import {
   MatSidenavModule
@@ -76,7 +76,7 @@ import {
   MatCheckboxModule
 } from '@angular/material/checkbox';
 import {
-  MatDatepickerModule
+  MatDatepickerModule,
 } from '@angular/material/datepicker';
 import {
   MatFormFieldModule
@@ -136,7 +136,10 @@ import { ColorDirective } from './color.directive';
 import { UpperletterPipe } from './upperletter.pipe';
 import { LetterComponent } from './letter/letter.component';
 import { CashflowComponent } from './component/cashflow/cashflow.component';
-import { CashflowtableComponent } from './cashflowtable/cashflowtable.component';
+import { CashflowtableComponent } from './cashflow/cashflowtable/cashflowtable.component';
+
+// tslint:disable-next-line: max-line-length
+import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component';
 
 @NgModule({
   declarations: [
@@ -169,6 +172,7 @@ import { CashflowtableComponent } from './cashflowtable/cashflowtable.component'
     LetterComponent,
     CashflowComponent,
     CashflowtableComponent,
+    DialogDialogOverviewExampleDialogComponent,
 
   ],
   imports: [
@@ -186,9 +190,13 @@ import { CashflowtableComponent } from './cashflowtable/cashflowtable.component'
     MatPaginatorModule,
     MatCardModule,
     DragDropModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [SidenavService],
+  providers: [SidenavService,
+    MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
