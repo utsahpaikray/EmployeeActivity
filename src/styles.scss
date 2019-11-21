@@ -7,3 +7,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0;
 
 }
+.calendar{
+  background-image: url('assets/images/calender.svg');
+  background-repeat: no-repeat;
+  background-position: right 0.5em center;
+  background-size: 1.6em;
+  padding-right: 2.6em;
+  cursor: pointer;
+}

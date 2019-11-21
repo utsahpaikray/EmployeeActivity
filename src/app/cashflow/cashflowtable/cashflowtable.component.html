@@ -1,12 +1,16 @@
 <div class="container">
   <div class="wraper  paypie outer-container">
-    <div class="All-detial">
-      <div class="order-view">
-        <ul class="view">
-          <li class="view-show">
+
+
+    <!---------------------------------------------------Full-screen-section-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+    <div class="full-screen-clendar-view">
+      <div class="cleandar-view">
+        <ul class="cleandar-detail-view">
+          <li class="view-show-list-style">
             <mat-icon>event_note</mat-icon> <a href="#">Cleander View</a>
           </li>
-          <li class="view-show Detail">
+          <li class="view-show-list-style Detail">
             <mat-icon>event_note</mat-icon> <a href="#">Detail View</a>
           </li>
         </ul>
@@ -42,25 +46,30 @@
 
       </button>
     </div>
-    <div class="main-table small expand ">
+
+
+
+    <div class="cashflow-table collapse expand ">
       <table>
-        <tr class="dates">
-          <td class="td1 fix  background-color horizenal">
-            <div class="fixed">
+        <!------------------------------------------Seven-dayDate-sectionstart-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+        <tr class="daily-week-date">
+          <td class="dym-dates left-scroll bg-color Top-scroll-first-tr">
+            <div class="Daily-week-month">
               <span class="space " (click)="DWMEvent(0)" [ngClass]="{'active': dayActive}">Daily</span>
-              <span class="space " (click)="DWMEvent(1)" [ngClass]="{'active': weekActive}" >Weekly</span>
+              <span class="space " (click)="DWMEvent(1)" [ngClass]="{'active': weekActive}">Weekly</span>
               <span class="space " (click)="DWMEvent(2)" [ngClass]="{'active': monthActive}">Monthly</span>
               <mat-icon class="arrow" (click)="DWMPreviousEvent(0)">arrow_back_ios</mat-icon>
               <mat-icon (click)="DWMNextEvent(0)">arrow_forward_ios</mat-icon>
             </div>
           </td>
-          <td class="td2 horizenal">
-            <div class="scroll1">
+          <td class="date-data Top-scroll-first-tr">
+            <div class="top-fixed-date">
               <table>
                 <tr>
                   <td class="icon"></td>
-                  <td *ngFor="let range of dateRange;">
-                   {{range}}
+                  <td *ngFor="let range of dateRange;" class="td-min-width">
+                    {{range}}
                   </td>
 
                 </tr>
@@ -68,69 +77,76 @@
             </div>
           </td>
         </tr>
-  <!---------------------------------------------------------------Opeinig balance  BLOCK----------------------------------->
-        <tr class="  openining balance">
-          <td class=" openining-balance  fix horizenal1 border ">
-            <span class="cashin-space">OPENING BALANCE</span>
+       <!---------------------------------------------------Opening balance-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+        <tr class="openining balance">
+          <td class=" openining-balance  left-scroll top-fixed-second-tr border ">
+            <span class="cashin-space-border">OPENING BALANCE</span>
           </td>
-          <td class="openining-balance     horizenal1">
+          <td class="openining-balance     top-fixed-second-tr">
             <table>
               <tr>
                 <td class="icon"></td>
-                <td *ngFor="let item of openingBalance?.balance"  >{{item}}</td>
+                <td *ngFor="let item of openingBalance?.balance" class="td-min-width">{{item}}</td>
               </tr>
             </table>
           </td>
         </tr>
 
-        <!---------------------------------------------------------------CASHIN  BLOCK----------------------------------->
+        <!---------------------------------------------------------------CASHIN  BLOCK-----------------------------------------------
+        -------------------------------------------------------------------------------------------------------------------------------->
         <tr class="cashin">
-          <td class="fix horizenal2 cashin1 border" >
-            <span class="cashin-space border">CASH IN</span>
+          <td class="left-scroll top-fixed-third-tr cashin1 border">
+            <span class="cashin-space-border border">CASH IN</span>
           </td>
-          <td class="horizenal2">
+          <td class=" top-fixed-third-tr color">
             <table>
               <tr>
                 <td class="icon"></td>
-              <td colspan="7"></td>
+                <td colspan="7"></td>
               </tr>
             </table>
           </td>
         </tr>
+
+         <!---------------------------------------------------Account-receivable-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
         <tr>
-          <td class="fix border horizenal3 Reciavle">
+          <td class="left-scroll border top-fixed-fourth-tr Reciavle">
 
-              <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" *ngIf="!accountReceivable" (click) = "expandCollapse(1)">add_circle</mat-icon>
-             <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" *ngIf="accountReceivable" (click) = "expandCollapse(1)">remove_circle</mat-icon>
+            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" *ngIf="!accountReceivable"
+              (click)="expandCollapse(1)">
+              add_circle</mat-icon>
+            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" *ngIf="accountReceivable"
+              (click)="expandCollapse(1)">remove_circle</mat-icon>
 
-            <span class="account-receviavle-space horizenal3">Accounnt Recivable</span>
+            <span class="account-receviavle-space top-fixed-fourth-tr">Accounnt Recivable</span>
           </td>
-          <td class="Accounnt horizenal3">
+          <td class="Accounnt top-fixed-fourth-tr">
 
             <table>
               <tr>
                 <td class="icon"></td>
-                <td *ngFor="let item of CashIn?.AccountReceivable?.balance;" >{{item}}
+                <td *ngFor="let item of CashIn?.AccountReceivable?.balance;"class="td-min-width">{{item}}
                 </td>
               </tr>
             </table>
 
           </td>
         </tr>
-
         <tr>
-          <td class=" fix border horizenal4">
+          <td class=" left-scroll border top-fixed-fifth-tr">
 
             <table>
               <tr>
-                <td style="width:50%" class="charts horizenal4"> <span class="Accoumt-space horizenal4">Chart Of
+                <td class="charts top-fixed-fifth-tr chart-account-space"> <span class="Accoumt-space top-fixed-fifth-tr">Chart Of
                     Account</span></td>
-                <td class="charts horizenal4"> <span class="customer-sapce horizenal4">Customer</span></td>
+                <td class="charts top-fixed-fifth-tr"> <span class="customer-sapce top-fixed-fifth-tr">Customer</span></td>
               </tr>
             </table>
           </td>
 
-          <td class=" horizenal4">
+          <td class=" top-fixed-fifth-tr">
             <table>
               <tr>
                 <td class="icon"></td>
@@ -141,133 +157,241 @@
           </td>
         </tr>
         <ng-container *ngIf="accountReceivable">
-        <ng-container *ngFor="let item of CashIn.AccountReceivable.ChartofAccount;">
-            <tr *ngFor="let customer of item.customer;">
-                <td class=" fix">
-                  <table>
-                    <tr>
-                      <td class="text">
-                        <span class="chartName">
+          <ng-container *ngFor="let item of CashIn.AccountReceivable.ChartofAccount.subChartOfAccounts;">
+            <tr>
+              <td class="left-scroll  top-fixed-third-tr  border text coa ">{{item.name}}</td>
+              <td class="service-income">
+                <table>
+                  <tr>
+                    <td class="icon icon-space"></td>
+                    <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of item.balance">{{balance}}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+              <ng-container *ngFor="let sub of item.sub">
+                  <tr>
+
+
+                      <td>
+                        <table>
+                          <tr>
+                              <td class="left-scroll  top-fixed-third-tr  border text coa1">
+                                  <span class="sub-coa">{{sub.name}}</span></td>
+                            <td></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td class="service-income coa1">
+                        <table>
+                          <tr>
+                              <td class="icon icon-space-sub "></td>
+                            <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of sub.balance">{{balance}}</td>
+                          </tr>
+                          <tr>
+                            <td class="icon"></td>
+
+                          </tr>
+                        </table>
+                      </td>
+                  </tr>
+                    <ng-container *ngFor="let customerData of sub.customer">
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="space left-scroll"></td>
+                                <td class="left-scroll customer-names" (click)="activateCustomerTransaction('CashIn','AccountReceivable',item.name,sub.name,customerData.CustomerName)"><span>{{customerData.CustomerName}}</span></td>
+
+                              </tr>
+                            </table>
+                            </td>
+                          <td>
+                            <table>
+                              <tr>
+                                  <td class="icon icon-space"></td>
+                                <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of customerData.subTotals">{{balance}}</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr *ngIf="customerData.activateTransactions">
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="customer"></td>
+                                <td class="customer">
+                                  <span></span>
+                                </td>
+                          </tr>
+                        </table>
+                        </td>
+                          <td class="white">
+                              <div class="scroll">
+                                <table>
+                                  <tr class="Accounts Reciavle projection-actual">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionActaul">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                  <tr class="Accounts Reciavle projection-customer">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionCustomer">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                  <tr class="Accounts Reciavle projetcion-system">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionSystem">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                </table>
+                              </div>
+                          </td>
+                        </tr>
+                    </ng-container>
+
+              </ng-container>
+
+
+            <tr *ngFor="let customer of item.customer">
+              <td class=" left-scroll">
+                <table>
+                  <tr>
+                    <td class="text">
+                      <span class="chartName">
                         {{item.name}}
                       </span>
-                      </td>
-                      <td class="text customerborder">
-                          <span class="chartName">
+                    </td>
+                    <td class="text customerborder">
+                      <span class="chartName">
                         {{customer.CustomerName}}
-                        </span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td class="white">
+                <div class="scroll">
+                  <table>
+                    <tr class="Accounts Reciavle projection-actual">
+                      <td class="icon">
+                        <mat-icon class="icons">account_circle</mat-icon>
                       </td>
+                      <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                        <!-- {{customer.ProjectionActaul}} -->
+                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+
+                      </ng-container>
+                    </tr>
+                    <tr class="Accounts Reciavle projection-customer">
+                      <td class="icon">
+                        <mat-icon class="icons">account_circle</mat-icon>
+                      </td>
+                      <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                      </ng-container>
+                    </tr>
+                    <tr class="Accounts Reciavle projetcion-system">
+                      <td class="icon">
+                        <mat-icon class="icons">account_circle</mat-icon>
+                      </td>
+                      <ng-container *ngFor="let item of customer.ProjectionSystem;">
+                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                      </ng-container>
                     </tr>
                   </table>
-                </td>
-                <td class="white">
-                  <div class="scroll">
-                    <table>
-                      <tr class="Accounts Reciavle projection-actual">
-                        <td class="icon" >
-                          <mat-icon class="icons">account_circle</mat-icon>
-                        </td>
-                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
-<!-- {{customer.ProjectionActaul}} -->
-                            <td mat-raised-button (click)="openDialog()">{{item}}</td>
-
-                        </ng-container>
-                      </tr>
-                      <tr class="Accounts Reciavle projection-customer">
-                        <td class="icon">
-                          <mat-icon class="icons">account_circle</mat-icon>
-                        </td>
-                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                            <td mat-raised-button (click)="openDialog()">{{item}}</td>
-                        </ng-container>
-                      </tr>
-                      <tr class="Accounts Reciavle projetcion-system">
-                        <td class="icon">
-                          <mat-icon class="icons">account_circle</mat-icon>
-                        </td>
-                        <ng-container *ngFor="let item of customer.ProjectionSystem;">
-                            <td mat-raised-button (click)="openDialog()">{{item}}</td>
-                        </ng-container>
-                      </tr>
-                    </table>
-                  </div>
-                </td>
+                </div>
+              </td>
             </tr>
           </ng-container>
           <tr>
-            <td class=" fix border1">
+            <td class=" left-scroll border1">
               <table>
                 <tr>
-                  <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add Overude Invoice</button>
-                  <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(1)">Add new transaction</button></td>
+                  <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add
+                      Overude Invoice</button>
+                  <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(1)">Add new
+                      transaction</button></td>
                 </tr>
               </table>
             </td>
 
-            <td class="" *ngIf="addReceivable">
+            <td class="add-transaction" *ngIf="addReceivable">
               <table>
-                <tr>
-                    <ul class="customer-detail1">
-                        <li class="customer1">
-                          Customer Name
-                          <select name="carlist"  class="slected-field">
-                            <option value="volvo">John</option>
-                            <option value="saab">Albert</option>
-                            <option value="opel">Rocky</option>
-                            <option value="audi">Albert</option>
-                          </select>
+                <tr class="form-edit">
+                  <td>
+                    <label>Customer name</label>
+                      <select class="input-edit" name="carlist" >
+                          <option value="volvo">John</option>
+                          <option value="saab">Albert</option>
+                          <option value="opel">Rocky</option>
+                          <option value="audi">Albert</option>
+                        </select>
+                  </td>
+                  <td>
+                      <label>Chart of Account</label>
+                      <select class="input-edit" name="carlist" >
 
-                        </li>
-                        <li class="customer1">
-                          Chart of Account
-                          <select name="carlist"  class="slected-field">
+                          <option value="saab">Cpa</option>
+                          <option value="opel">Bpa</option>
+                          <option value="audi">Cpa</option>
+                        </select>
+                  </td>
+                  <td>
+                      <div class="date-picker">
+                          <label id="select-option" class="select-label">Due Date: </label>
+                          <input class="input-edit calendar" matInput [matDatepicker]="picker1" placeholder="Choose a date">
 
-                            <option value="saab">Cpa</option>
-                            <option value="opel">Bpa</option>
-                            <option value="audi">Cpa</option>
-                          </select>
-                        </li>
-                        <li class="customer1">
-                          Due Date
-                          <mat-form-field>
-                              <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
-                              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                              <mat-datepicker #picker1></mat-datepicker>
-                            </mat-form-field>
-                        </li>
-                        <li class="customer1 ammount">
-                          Ammount
-                          <input type="text" class="text1">
-                        </li>
-                        <li class="customer1 Transaction">
-                          Repeat Transaction
-                          <select name="carlist"  class="slected-field">
-                            <option value="volvo">Daily</option>
-                            <option value="saab">Week</option>
-                            <option value="opel">Month</option>
+                        <mat-datepicker #picker1></mat-datepicker>
+                      </div>
+                  </td>
+                  <td><label for="">Ammount</label>
+                      <input class="input-edit" formcontrolname="Amount" type="number">
+                  </td>
+                  <td>
+                    <label for=""></label>
+                      <select class="input-edit" name="carlist" >
+                          <option value="volvo">Daily</option>
+                          <option value="saab">Week</option>
+                          <option value="opel">Month</option>
 
-                          </select>
-                        </li>
-                        <li class="customer1 till">
-                          Till Date
-                          <input type="date">
-                        </li>
+                        </select>
+                  </td>
+                  <td>
+                      <div class="date-picker">
+                          <label id="select-option" class="select-label">Till Date: </label>
+                          <input class="input-edit calendar" matInput [matDatepicker]="picker2" placeholder="Choose a date">
 
+                        <mat-datepicker #picker2></mat-datepicker>
+                      </div>
+                  </td>
 
-                      </ul>
                 </tr>
               </table>
             </td>
           </tr>
         </ng-container>
 
-        <!---------------------------------------------------------------Income  BLOCK------------------------------------------>
-            <tr>
-            <td class="fix border horizenal3 Reciavle">
-            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" (click) ="expandCollapse(2)" *ngIf="!income">add_circle</mat-icon>
-            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" (click) ="expandCollapse(2)" *ngIf="income">remove_circle</mat-icon>
-            <span class="account-receviavle-space horizenal3 income-bottom-border">Income</span>
-            </td>
-            <td class="Accounnt horizenal3">
+        <!---------------------------------------------------Income-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+        <tr>
+          <td class="left-scroll border top-fixed-fourth-tr Reciavle">
+            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" (click)="expandCollapse(2)"
+              *ngIf="!income">add_circle</mat-icon>
+            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color size" (click)="expandCollapse(2)"
+              *ngIf="income">remove_circle</mat-icon>
+            <span class="account-receviavle-space top-fixed-fourth-tr income-bottom-border">Income</span>
+          </td>
+          <td class="Accounnt top-fixed-fourth-tr">
 
             <table>
               <tr>
@@ -277,21 +401,21 @@
               </tr>
             </table>
 
-            </td>
-            </tr>
-             <tr>
-            <td class=" fix border horizenal4">
+          </td>
+        </tr>
+        <tr>
+          <td class=" left-scroll border top-fixed-fifth-tr">
 
             <table>
               <tr>
-                <td style="width:50%" class="charts horizenal4"> <span class="Accoumt-space horizenal4">Chart Of
+                <td style="width:50%" class="charts top-fixed-fifth-tr chart-account-space"> <span class="Accoumt-space top-fixed-fifth-tr">Chart Of
                     Account</span></td>
-                <td class="charts horizenal4"> <span class="customer-sapce horizenal4">Customer</span></td>
+                <td class="charts top-fixed-fifth-tr"> <span class="customer-sapce top-fixed-fifth-tr">Customer</span></td>
               </tr>
             </table>
-            </td>
+          </td>
 
-            <td class=" horizenal4">
+          <td class=" top-fixed-fifth-tr">
             <table>
               <tr>
                 <td class="icon"></td>
@@ -299,457 +423,767 @@
                 </td>
               </tr>
             </table>
-            </td>
-            </tr>
-        <ng-container *ngIf="income">
-        <ng-container *ngFor="let item of CashIn.Income.ChartofAccount;">
-        <tr *ngFor="let customer of item.customer;">
-            <td class=" fix">
-              <table>
-                <tr>
-                  <td class="text">
-                    {{item.name}}
-                  </td>
-                  <td class="text ">
-                    {{customer.CustomerName}}
-                  </td>
-                </tr>
-              </table>
-            </td>
-            <td class="white">
-              <div class="scroll">
-                <table>
-                  <tr class="Accounts Reciavle projection-actual">
-                    <td class="icon" >
-                      <mat-icon class="icons">account_circle</mat-icon>
-                    </td>
-                    <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                        <td>{{item}}</td>
-                    </ng-container>
-                  </tr>
-                  <tr class="Accounts Reciavle projection-customer">
-                    <td class="icon">
-                      <mat-icon class="icons">account_circle</mat-icon>
-                    </td>
-                    <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                        <td>{{item}}</td>
-                    </ng-container>
-                  </tr>
-                  <tr class="Accounts Reciavle projetcion-system">
-                    <td class="icon">
-                      <mat-icon class="icons">account_circle</mat-icon>
-                    </td>
-                    <ng-container *ngFor="let item of customer.ProjectionSystem;">
-                        <td>{{item}}</td>
-                    </ng-container>
-                  </tr>
-                </table>
-              </div>
-            </td>
-          </tr>
-        </ng-container>
-
-        <tr >
-        <td class=" fix border1">
-
-          <table>
-            <tr>
-              <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add Overude Invoice</button>
-              <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(2)">Add new transaction</button></td>
-            </tr>
-          </table>
-        </td>
-
-        <td class="" *ngIf="addIncome">
-          <table>
-            <tr>
-                <ul class="customer-detail1">
-                    <li class="customer1">
-                      Customer Name
-                      <select name="carlist"  class="slected-field">
-                        <option value="volvo">John</option>
-                        <option value="saab">Albert</option>
-                        <option value="opel">Rocky</option>
-                        <option value="audi">Albert</option>
-                      </select>
-
-                    </li>
-                    <li class="customer1">
-                      Chart of Account
-                      <select name="carlist"  class="slected-field">
-                        <option value="volvo">John</option>
-                        <option value="saab">Cpa</option>
-                        <option value="opel">Bpa</option>
-                        <option value="audi">Cpa</option>
-                      </select>
-                    </li>
-                    <li class="customer1">
-                      Due Date
-                      <mat-form-field>
-                          <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
-                          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                          <mat-datepicker #picker2></mat-datepicker>
-                        </mat-form-field>
-                    </li>
-                    <li class="customer1 ammount">
-                      Ammount
-                      <input type="text" class="text1">
-                    </li>
-                    <li class="customer1 Transaction">
-                      Repeat Transaction
-                      <select name="carlist"  class="slected-field">
-                        <option value="volvo">Daily</option>
-                        <option value="saab">Week</option>
-                        <option value="opel">Month</option>
-
-                      </select>
-                    </li>
-                    <li class="customer1 till">
-                      Till Date
-                      <input type="date">
-                    </li>
-
-
-                  </ul>
-            </tr>
-          </table>
-        </td>
+          </td>
         </tr>
-        </ng-container>
+        <ng-container *ngIf="income">
+            <ng-container *ngFor="let item of CashIn.Income.ChartofAccount.subChartOfAccounts;">
+              <!-- {{item.name}} -->
+              <tr>
+                <td class="left-scroll  top-fixed-third-tr  border text coa">{{item.name}} </td>
+                <td class="service-income">
+                  <table>
+                    <tr>
+                      <td class="icon icon-space"></td>
+                      <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of item.balance">{{balance}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+                <ng-container *ngFor="let sub of item.sub">
+                    <tr>
+                        <td class="left-scroll  top-fixed-third-tr  border text coa1">
+                          <span class="sub-coa">{{sub.name}}</span></td>
+                        <td class="service-income coa1">
+                          <table>
+                            <tr>
+                                <td class="icon icon-space-sub "></td>
+                              <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of sub.balance">{{balance}}</td>
+                            </tr>
+                            <tr>
+                              <td class="icon"></td>
+
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <ng-container *ngFor="let customerData of sub.customer">
+                          <tr>
+                            <td>
+                              <table>
+                                <tr>
+                                  <td class="space left-scroll"></td>
+                                  <td class="left-scroll customer-names" (click)="activateCustomerTransaction('CashIn','AccountReceivable',item.name,sub.name,customerData.CustomerName)"><span>{{customerData.CustomerName}}</span></td>
+
+                                </tr>
+                              </table>
+                              </td>
+                            <td>
+                              <table>
+                                <tr>
+                                    <td class="icon icon-space"></td>
+                                  <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of customerData.subTotals">{{balance}}</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr *ngIf="sub.activateTransactions">
+                            <td>
+                              <table>
+                                <tr>
+                                  <td class="customer"></td>
+                                  <td class="customer">
+                                    <span></span>
+                                  </td>
+                            </tr>
+                          </table>
+                          </td>
+                            <td class="white">
+                                <div class="scroll">
+                                  <table>
+                                    <tr class="Accounts Reciavle projection-actual">
+                                      <td class="icon1">
+                                        <mat-icon class="icons">account_circle</mat-icon>
+                                      </td>
+                                      <ng-container *ngFor="let item of customerData.ProjectionActaul">
+                                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                      </ng-container>
+                                    </tr>
+                                    <tr class="Accounts Reciavle projection-customer">
+                                      <td class="icon1">
+                                        <mat-icon class="icons">account_circle</mat-icon>
+                                      </td>
+                                      <ng-container *ngFor="let item of customerData.ProjectionCustomer">
+                                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                      </ng-container>
+                                    </tr>
+                                    <tr class="Accounts Reciavle projetcion-system">
+                                      <td class="icon1">
+                                        <mat-icon class="icons">account_circle</mat-icon>
+                                      </td>
+                                      <ng-container *ngFor="let item of customerData.ProjectionSystem">
+                                        <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                      </ng-container>
+                                    </tr>
+                                  </table>
+                                </div>
+                            </td>
+                          </tr>
+                      </ng-container>
+
+                </ng-container>
+
+
+              <tr *ngFor="let customer of item.customer">
+                <td class=" left-scroll">
+                  <table>
+                    <tr>
+                      <td class="text">
+                        <span class="chartName">
+                          {{item.name}}
+                        </span>
+                      </td>
+                      <td class="text customerborder">
+                        <span class="chartName">
+                          {{customer.CustomerName}}
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="white">
+                  <div class="scroll">
+                    <table>
+                      <tr class="Accounts Reciavle projection-actual">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <!-- {{customer.ProjectionActaul}} -->
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projection-customer">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projetcion-system">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionSystem;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+            <tr>
+                <td class=" left-scroll border1">
+                  <table>
+                    <tr>
+                      <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add
+                          Overude Invoice</button>
+                      <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(1)">Add new
+                          transaction</button></td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="add-transaction" *ngIf="addReceivable">
+                  <table>
+                    <tr class="form-edit">
+                      <td>
+                        <label>Customer name</label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">John</option>
+                              <option value="saab">Albert</option>
+                              <option value="opel">Rocky</option>
+                              <option value="audi">Albert</option>
+                            </select>
+                      </td>
+                      <td>
+                          <label>Chart of Account</label>
+                          <select class="input-edit" name="carlist" >
+
+                              <option value="saab">Cpa</option>
+                              <option value="opel">Bpa</option>
+                              <option value="audi">Cpa</option>
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Due Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker3" placeholder="Choose a date">
+
+                            <mat-datepicker #picker3></mat-datepicker>
+                          </div>
+                      </td>
+                      <td><label for="">Ammount</label>
+                          <input class="input-edit" formcontrolname="Amount" type="number">
+                      </td>
+                      <td>
+                        <label for=""></label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">Daily</option>
+                              <option value="saab">Week</option>
+                              <option value="opel">Month</option>
+
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Till Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker4" placeholder="Choose a date">
+
+                            <mat-datepicker #picker4></mat-datepicker>
+                          </div>
+                      </td>
+
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+          </ng-container>
 
         <!---------------------------------------------------------------CASHOUT  BLOCK------------------------------------------>
         <tr class="cashin">
-            <td class="fix horizenal2 cashin1">
-              <span class="cashin-space border">CASH OUT</span>
-            </td>
-            <td class="horizenal2">
-              <table>
-                <tr>
-                  <td class="icon"></td>
-                <td colspan="7"></td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td class="fix border horizenal3 Reciavle">
-              <mat-icon *ngIf="!accountPayable" class="mat-icon notranslate material-icons mat-icon-no-color size" (click)="expandCollapse(3)">add_circle</mat-icon>
-              <mat-icon  *ngIf="accountPayable" class="mat-icon notranslate material-icons mat-icon-no-color size"  (click)="expandCollapse(3)">remove_circle</mat-icon>
-              <span class="account-receviavle-space horizenal3">Accounnt Payable</span>
-            </td>
-            <td class="Accounnt horizenal3">
-
-              <table>
-                <tr>
-                  <td class="icon"></td>
-                  <td *ngFor="let item of CashIn?.AccountReceivable?.balance;">{{item}}
-                  </td>
-                </tr>
-              </table>
-
-            </td>
-          </tr>
-          <tr>
-            <td class=" fix border horizenal4">
-
-              <table>
-                <tr>
-                  <td style="width:50%" class="charts horizenal4"> <span class="Accoumt-space horizenal4">Chart Of
-                      Account</span></td>
-                  <td class="charts horizenal4"> <span class="customer-sapce horizenal4">Customer</span></td>
-                </tr>
-              </table>
-            </td>
-
-            <td class=" horizenal4">
-              <table>
-                <tr>
-                  <td class="icon"></td>
-                  <td colspan="7">
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <ng-container *ngIf="accountPayable">
-                <ng-container *ngFor="let item of CashIn.AccountReceivable.ChartofAccount;">
-                    <tr *ngFor="let customer of item.customer;">
-                        <td class=" fix">
-                          <table>
-                            <tr>
-                              <td class="text">
-                                {{item.name}}
-                              </td>
-                              <td class="text ">
-                                {{customer.CustomerName}}
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="white">
-                          <div class="scroll">
-                            <table>
-                              <tr class="Accounts Reciavle projection-actual">
-                                <td class="icon" >
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                                    <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                              <tr class="Accounts Reciavle projection-customer">
-                                <td class="icon">
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                                    <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                              <tr class="Accounts Reciavle projetcion-system">
-                                <td class="icon">
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionSystem;">
-                                    <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                            </table>
-                          </div>
-                        </td>
-                      </tr>
-                </ng-container>
-                  <tr >
-                    <td class=" fix border1">
-
-                      <table>
-                        <tr>
-                          <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add Overude Bills</button>
-                          <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(3)">Add new transaction</button></td>
-                        </tr>
-                      </table>
-                    </td>
-
-                    <td class="" *ngIf="addPayable">
-                      <table>
-                        <tr>
-                            <ul class="customer-detail1">
-                                <li class="customer1">
-                                  Customer Name
-                                  <select name="carlist"  class="slected-field">
-                                    <option value="volvo">John</option>
-                                    <option value="saab">Albert</option>
-                                    <option value="opel">Rocky</option>
-                                    <option value="audi">Albert</option>
-                                  </select>
-
-                                </li>
-                                <li class="customer1">
-                                  Chart of Account
-                                  <select name="carlist"  class="slected-field">
-                                    <option value="volvo">John</option>
-                                    <option value="saab">Cpa</option>
-                                    <option value="opel">Bpa</option>
-                                    <option value="audi">Cpa</option>
-                                  </select>
-                                </li>
-                                <li class="customer1">
-                                  Due Date
-                                  <mat-form-field>
-                                      <input matInput [matDatepicker]="picker3" placeholder="Choose a date">
-                                      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-                                      <mat-datepicker #picker3></mat-datepicker>
-                                    </mat-form-field>
-                                </li>
-                                <li class="customer1 ammount">
-                                  Ammount
-                                  <input type="text" class="text1">
-                                </li>
-                                <li class="customer1 Transaction">
-                                  Repeat Transaction
-                                  <select name="carlist"  class="slected-field">
-                                    <option value="volvo">Daily</option>
-                                    <option value="saab">Week</option>
-                                    <option value="opel">Month</option>
-
-                                  </select>
-                                </li>
-                                <li class="customer1 till">
-                                  Till Date
-                                  <input type="date">
-                                </li>
-
-
-                              </ul>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-          </ng-container>
-
-
-          <!---------------------------------------------------------------Expense  BLOCK------------------------------------------>
-
-
-          <tr>
-              <td class="fix border horizenal3 Reciavle">
-                  <mat-icon *ngIf="!expense"  class="mat-icon notranslate material-icons mat-icon-no-color size" (click) ="expandCollapse(4)">add_circle</mat-icon>
-                  <mat-icon *ngIf="expense"  class="mat-icon notranslate material-icons mat-icon-no-color size" (click) ="expandCollapse(4)">remove_circle</mat-icon>
-                  <span class="account-receviavle-space horizenal3 income-bottom-border">Expense</span>
-              </td>
-              <td class="Accounnt horizenal3">
-
-                <table>
-                  <tr>
-                    <td class="icon"></td>
-                    <td *ngFor="let item of CashIn?.Income?.balance;">{{item}}
-                    </td>
-                  </tr>
-                </table>
-
-              </td>
-            </tr>
-            <tr>
-              <td class=" fix border horizenal4">
-
-                <table>
-                  <tr>
-                    <td style="width:50%" class="charts horizenal4"> <span class="Accoumt-space horizenal4">Chart Of
-                        Account</span></td>
-                    <td class="charts horizenal4"> <span class="customer-sapce horizenal4">Customer</span></td>
-                  </tr>
-                </table>
-              </td>
-
-              <td class=" horizenal4">
-                <table>
-                  <tr>
-                    <td class="icon"></td>
-                    <td colspan="7">
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <ng-container *ngIf="expense">
-                <ng-container *ngFor="let item of CashIn.Income.ChartofAccount;">
-                    <tr *ngFor="let customer of item.customer;">
-                        <td class=" fix">
-                          <table>
-                            <tr>
-                              <td class="text">
-                                {{item.name}}
-                              </td>
-                              <td class="text ">
-                                {{customer.CustomerName}}
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="white">
-                          <div class="scroll">
-                            <table>
-                              <tr class="Accounts Reciavle projection-actual">
-                                <td class="icon" >
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                                    <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                              <tr class="Accounts Reciavle projection-customer">
-                                <td class="icon">
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionActaul;">
-                                    <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                              <tr class="Accounts Reciavle projetcion-system">
-                                <td class="icon">
-                                  <mat-icon class="icons">account_circle</mat-icon>
-                                </td>
-                                <ng-container *ngFor="let item of customer.ProjectionSystem;">
-                                  <td>{{item}}</td>
-                                </ng-container>
-                              </tr>
-                            </table>
-                          </div>
-                        </td>
-                      </tr>
-                </ng-container>
-                <tr >
-                    <td class=" fix border1">
-
-                      <table>
-                        <tr>
-                          <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add Overude Bills</button>
-                          <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(4)">Add new transaction</button></td>
-                        </tr>
-                      </table>
-                    </td>
-
-                    <td class="" *ngIf="addExpense">
-                      <table>
-                        <tr>
-                            <ul class="customer-detail1">
-                                <li class="customer1">
-                                  Customer Name
-                                  <select name="carlist"  class="slected-field">
-                                    <option value="volvo">John</option>
-                                    <option value="saab">Albert</option>
-                                    <option value="opel">Rocky</option>
-                                    <option value="audi">Albert</option>
-                                  </select>
-
-                                </li>
-                                <li class="customer1">
-                                  Chart of Account
-                                  <select name="carlist"  class="slected-field">
-
-                                    <option value="saab">Cpa</option>
-                                    <option value="opel">Bpa</option>
-                                    <option value="audi">Cpa</option>
-                                  </select>
-                                </li>
-                                <li class="customer1">
-                                  Due Date
-                                  <mat-form-field>
-                                      <input matInput [matDatepicker]="picker4" placeholder="Choose a date">
-                                      <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
-                                      <mat-datepicker #picker4></mat-datepicker>
-                                    </mat-form-field>
-                                </li>
-                                <li class="customer1 ammount">
-                                  Ammount
-                                  <input type="text" class="text1">
-                                </li>
-                                <li class="customer1 Transaction">
-                                  Repeat Transaction
-                                  <select name="carlist"  class="slected-field">
-                                    <option value="volvo">Daily</option>
-                                    <option value="saab">Week</option>
-                                    <option value="opel">Month</option>
-
-                                  </select>
-                                </li>
-                                <li class="customer1 till">
-                                  Till Date
-                                  <input type="date">
-                                </li>
-
-
-                              </ul>
-                        </tr>
-                      </table>
-                    </td>
-                </tr>
-             </ng-container>
-<!-----------------------------------------------------------Clsoing Balance------------------------------------------------------------>
-        <tr class="  closing balance">
-          <td class=" openining-balance  fix horizenal1 border ">
-            <span class="cashin-space">CLOSING BALANCE</span>
+          <td class="left-scroll  top-fixed-third-tr cashin1">
+            <span class="cashin-space-border border">CASH OUT</span>
           </td>
-          <td class="openining-balance     horizenal1">
+          <td class=" top-fixed-third-tr">
+            <table>
+              <tr>
+                <td class="icon"></td>
+                <td colspan="7"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+          <!---------------------------------------------------Account-Payable-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+        <tr>
+          <td class="left-scroll border top-fixed-fourth-tr Reciavle">
+            <mat-icon *ngIf="!accountPayable" class="mat-icon notranslate material-icons mat-icon-no-color size"
+              (click)="expandCollapse(3)">add_circle</mat-icon>
+            <mat-icon *ngIf="accountPayable" class="mat-icon notranslate material-icons mat-icon-no-color size"
+              (click)="expandCollapse(3)">remove_circle</mat-icon>
+            <span class="account-receviavle-space top-fixed-fourth-tr">Accounnt Payable</span>
+          </td>
+          <td class="Accounnt top-fixed-fourth-tr">
+
+            <table>
+              <tr>
+                <td class="icon"></td>
+                <td *ngFor="let item of CashIn?.AccountReceivable?.balance;">{{item}}
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+        <tr>
+          <td class=" left-scroll border top-fixed-fifth-tr">
+
+            <table>
+              <tr>
+                <td style="width:50%" class="charts top-fixed-fifth-tr chart-account-space"> <span class="Accoumt-space top-fixed-fifth-tr">Chart Of
+                    Account</span></td>
+                <td class="charts top-fixed-fifth-tr"> <span class="customer-sapce top-fixed-fifth-tr">Customer</span></td>
+              </tr>
+            </table>
+          </td>
+
+          <td class=" top-fixed-fifth-tr">
+            <table>
+              <tr>
+                <td class="icon"></td>
+                <td colspan="7">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <ng-container *ngIf="accountPayable">
+            <ng-container *ngFor="let item of CashOut.AccountPayable.ChartofAccount.subChartOfAccounts;">
+              <!-- {{item.name}} -->
+              <tr>
+                <td class="left-scroll  top-fixed-third-tr  border text coa">{{item.name}} </td>
+                <td class="service-income">
+                  <table>
+                    <tr>
+                      <td class="icon icon-space"></td>
+                      <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of item.balance">{{balance}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+               <ng-container *ngFor="let sub of item.sub">
+                              <tr>
+                                  <td class="left-scroll  top-fixed-third-tr  border text coa1">
+                                    <span class="sub-coa">{{sub.name}}</span></td>
+                                  <td class="service-income coa1">
+                                    <table>
+                                      <tr>
+                                          <td class="icon icon-space-sub "></td>
+                                        <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of sub.balance">{{balance}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="icon"></td>
+
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <ng-container *ngFor="let customerData of sub.customer">
+                                    <tr>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td class="space left-scroll"></td>
+                                            <td class="left-scroll customer-names" (click)="activateCustomerTransaction('CashIn','AccountReceivable',item.name,sub.name,customerData.CustomerName)"><span>{{customerData.CustomerName}}</span></td>
+
+                                          </tr>
+                                        </table>
+                                        </td>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                              <td class="icon icon-space"></td>
+                                            <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of customerData.subTotals">{{balance}}</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr *ngIf="sub.activateTransactions">
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td class="customer"></td>
+                                            <td class="customer">
+                                              <span></span>
+                                            </td>
+                                      </tr>
+                                    </table>
+                                    </td>
+                                      <td class="white">
+                                          <div class="scroll">
+                                            <table>
+                                              <tr class="Accounts Reciavle projection-actual">
+                                                <td class="icon1">
+                                                  <mat-icon class="icons">account_circle</mat-icon>
+                                                </td>
+                                                <ng-container *ngFor="let item of customerData.ProjectionActaul">
+                                                  <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                                </ng-container>
+                                              </tr>
+                                              <tr class="Accounts Reciavle projection-customer">
+                                                <td class="icon1">
+                                                  <mat-icon class="icons">account_circle</mat-icon>
+                                                </td>
+                                                <ng-container *ngFor="let item of customerData.ProjectionCustomer">
+                                                  <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                                </ng-container>
+                                              </tr>
+                                              <tr class="Accounts Reciavle projetcion-system">
+                                                <td class="icon1">
+                                                  <mat-icon class="icons">account_circle</mat-icon>
+                                                </td>
+                                                <ng-container *ngFor="let item of customerData.ProjectionSystem">
+                                                  <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                                </ng-container>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                </ng-container>
+
+                </ng-container>
+
+
+              <tr *ngFor="let customer of item.customer">
+                <td class=" left-scroll">
+                  <table>
+                    <tr>
+                      <td class="text">
+                        <span class="chartName">
+                          {{item.name}}
+                        </span>
+                      </td>
+                      <td class="text customerborder">
+                        <span class="chartName">
+                          {{customer.CustomerName}}
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="white">
+                  <div class="scroll">
+                    <table>
+                      <tr class="Accounts Reciavle projection-actual">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <!-- {{customer.ProjectionActaul}} -->
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projection-customer">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projetcion-system">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionSystem;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+            <tr>
+                <td class=" left-scroll border1">
+                  <table>
+                    <tr>
+                      <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add
+                          Overude Invoice</button>
+                      <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(1)">Add new
+                          transaction</button></td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="add-transaction" *ngIf="addReceivable">
+                  <table>
+                    <tr class="form-edit">
+                      <td>
+                        <label>Customer name</label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">John</option>
+                              <option value="saab">Albert</option>
+                              <option value="opel">Rocky</option>
+                              <option value="audi">Albert</option>
+                            </select>
+                      </td>
+                      <td>
+                          <label>Chart of Account</label>
+                          <select class="input-edit" name="carlist" >
+
+                              <option value="saab">Cpa</option>
+                              <option value="opel">Bpa</option>
+                              <option value="audi">Cpa</option>
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Due Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker3" placeholder="Choose a date">
+
+                            <mat-datepicker #picker3></mat-datepicker>
+                          </div>
+                      </td>
+                      <td><label for="">Ammount</label>
+                          <input class="input-edit" formcontrolname="Amount" type="number">
+                      </td>
+                      <td>
+                        <label for=""></label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">Daily</option>
+                              <option value="saab">Week</option>
+                              <option value="opel">Month</option>
+
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Till Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker4" placeholder="Choose a date">
+
+                            <mat-datepicker #picker4></mat-datepicker>
+                          </div>
+                      </td>
+
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+        </ng-container>
+
+        <!---------------------------------------------------Expense-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+
+
+        <tr>
+          <td class="left-scroll border top-fixed-fourth-tr Reciavle">
+            <mat-icon *ngIf="!expense" class="mat-icon notranslate material-icons mat-icon-no-color size"
+              (click)="expandCollapse(4)">add_circle</mat-icon>
+            <mat-icon *ngIf="expense" class="mat-icon notranslate material-icons mat-icon-no-color size"
+              (click)="expandCollapse(4)">remove_circle</mat-icon>
+            <span class="account-receviavle-space top-fixed-fourth-tr income-bottom-border">Expense</span>
+          </td>
+          <td class="Accounnt top-fixed-fourth-tr">
+
+            <table>
+              <tr>
+                <td class="icon"></td>
+                <td *ngFor="let item of CashIn?.Income?.balance;">{{item}}
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+        <tr>
+          <td class=" left-scroll border top-fixed-fifth-tr">
+
+            <table>
+              <tr>
+                <td style="width:50%" class="charts top-fixed-fifth-tr"> <span class="Accoumt-space top-fixed-fifth-tr">Chart Of
+                    Account</span></td>
+                <td class="charts top-fixed-fifth-tr"> <span class="customer-sapce top-fixed-fifth-tr">Customer</span></td>
+              </tr>
+            </table>
+          </td>
+
+          <td class=" top-fixed-fifth-tr">
+            <table>
+              <tr>
+                <td class="icon"></td>
+                <td colspan="7">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <ng-container *ngIf="expense">
+            <ng-container *ngFor="let item of CashOut.Expense.ChartofAccount.subChartOfAccounts;">
+              <tr>
+                <td class="left-scroll  top-fixed-third-tr  border text coa">{{item.name}} </td>
+                <td class="service-income">
+                  <table>
+                    <tr>
+                      <td class="icon icon-space"></td>
+                      <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of item.balance">{{balance}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <ng-container *ngFor="let sub of item.sub">
+                  <tr>
+                      <td class="left-scroll  top-fixed-third-tr  border text coa1">
+                        <span class="sub-coa">{{sub.name}}</span></td>
+                      <td class="service-income coa1">
+                        <table>
+                          <tr>
+                              <td class="icon icon-space-sub "></td>
+                            <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of sub.balance">{{balance}}</td>
+                          </tr>
+                          <tr>
+                            <td class="icon"></td>
+
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <ng-container *ngFor="let customerData of sub.customer">
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="space left-scroll"></td>
+                                <td class="left-scroll customer-names" (click)="activateCustomerTransaction('CashIn','AccountReceivable',item.name,sub.name,customerData.CustomerName)"><span>{{customerData.CustomerName}}</span></td>
+
+                              </tr>
+                            </table>
+                            </td>
+                          <td>
+                            <table>
+                              <tr>
+                                  <td class="icon icon-space"></td>
+                                <td class="charts  top-fixed-third-tr text td-min-width" *ngFor="let balance of customerData.subTotals">{{balance}}</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr *ngIf="sub.activateTransactions">
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="customer"></td>
+                                <td class="customer">
+                                  <span></span>
+                                </td>
+                          </tr>
+                        </table>
+                        </td>
+                          <td class="white">
+                              <div class="scroll">
+                                <table>
+                                  <tr class="Accounts Reciavle projection-actual">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionActaul">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                  <tr class="Accounts Reciavle projection-customer">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionCustomer">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                  <tr class="Accounts Reciavle projetcion-system">
+                                    <td class="icon1">
+                                      <mat-icon class="icons">account_circle</mat-icon>
+                                    </td>
+                                    <ng-container *ngFor="let item of customerData.ProjectionSystem">
+                                      <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                                    </ng-container>
+                                  </tr>
+                                </table>
+                              </div>
+                          </td>
+                        </tr>
+                    </ng-container>
+
+              </ng-container>
+              <tr *ngFor="let customer of item.customer">
+                <td class=" left-scroll">
+                  <table>
+                    <tr>
+                      <td class="text">
+                        <span class="chartName">
+                          {{item.name}}
+                        </span>
+                      </td>
+                      <td class="text customerborder">
+                        <span class="chartName">
+                          {{customer.CustomerName}}
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="white">
+                  <div class="scroll">
+                    <table>
+                      <tr class="Accounts Reciavle projection-actual">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <!-- {{customer.ProjectionActaul}} -->
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projection-customer">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionActaul;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                      <tr class="Accounts Reciavle projetcion-system">
+                        <td class="icon">
+                          <mat-icon class="icons">account_circle</mat-icon>
+                        </td>
+                        <ng-container *ngFor="let item of customer.ProjectionSystem;">
+                          <td mat-raised-button (click)="openDialog()">{{item}}</td>
+                        </ng-container>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+            <tr>
+                <td class=" left-scroll border1">
+                  <table>
+                    <tr>
+                      <td style="width:50%" class="charts1"> <button type="button" class="btn" (click)="openDialog()">Add
+                          Overude Invoice</button>
+                      <td class="charts1 "> <button type="button" class="btn1" (click)="AddTransaction(1)">Add new
+                          transaction</button></td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="add-transaction" *ngIf="addReceivable">
+                  <table>
+                    <tr class="form-edit">
+                      <td>
+                        <label>Customer name</label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">John</option>
+                              <option value="saab">Albert</option>
+                              <option value="opel">Rocky</option>
+                              <option value="audi">Albert</option>
+                            </select>
+                      </td>
+                      <td>
+                          <label>Chart of Account</label>
+                          <select class="input-edit" name="carlist" >
+
+                              <option value="saab">Cpa</option>
+                              <option value="opel">Bpa</option>
+                              <option value="audi">Cpa</option>
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Due Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker3" placeholder="Choose a date">
+
+                            <mat-datepicker #picker3></mat-datepicker>
+                          </div>
+                      </td>
+                      <td><label for="">Ammount</label>
+                          <input class="input-edit" formcontrolname="Amount" type="number">
+                      </td>
+                      <td>
+                        <label for=""></label>
+                          <select class="input-edit" name="carlist" >
+                              <option value="volvo">Daily</option>
+                              <option value="saab">Week</option>
+                              <option value="opel">Month</option>
+
+                            </select>
+                      </td>
+                      <td>
+                          <div class="date-picker">
+                              <label id="select-option" class="select-label">Till Date: </label>
+                              <input class="input-edit calendar" matInput [matDatepicker]="picker4" placeholder="Choose a date">
+
+                            <mat-datepicker #picker4></mat-datepicker>
+                          </div>
+                      </td>
+
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+        </ng-container>
+        <!---------------------------------------------------Closing Balance-section start-----------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------->
+        <tr class="  closing balance">
+          <td class=" openining-balance  left-scroll top-fixed-second-tr border ">
+            <span class="cashin-space-border">CLOSING BALANCE</span>
+          </td>
+          <td class="openining-balance     top-fixed-second-tr">
             <table>
               <tr>
                 <td class="icon"></td>
@@ -758,7 +1192,20 @@
             </table>
           </td>
         </tr>
+
       </table>
+
     </div>
   </div>
+  <div class="strip">
+      <div class="last-download">
+        <p>Last Download date</p>
+      </div>
+    </div>
 </div>
+
+
+
+<!---------------------------------------------------------------------Strip--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
