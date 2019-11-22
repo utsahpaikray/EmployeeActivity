@@ -8,6 +8,7 @@
   // border-radius: 12px;
   // opacity: 1;
   // padding: 28px 33px;
+  position: relative;
 }
   .Overrude-invoive p {
       text-align: center;
@@ -28,19 +29,18 @@
       padding: 14px 26px;
       color:#7BAAAA;
       outline: none;
+      position: relative;
 
    }
-   .tabs-btn:focus{
-      background: #25BDD4!important;
-   color: white!important;
-}
+
    .overrude-table{
       background: #FFFFFF 0% 0% no-repeat padding-box;
       border: 1px solid #D2D2D2;
       border-radius: 20px;
 
-      height: 400px;
+      height: 300px;
       margin-top: 16px;
+      overflow: auto;
    }
    .overrude-table table{
        width: 100%;
@@ -115,4 +115,44 @@ text-align: center;
 }
 .close{
   border-radius: 30px;
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    border: 2px solid #00a3b8;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 11px solid #25bdd4;
+  position: absolute;
+  top: 125px;
+  left: 30px;
+}
+.tabs-btn:focus {
+  background: #25BDD4!important;
+color: white!important;
+// width: 0;
+// height: 0;
+// border-left: 5px solid transparent;
+// border-right: 5px solid transparent;
+// border-top: 11px solid #25bdd4;
+// position: absolute;
+// top: 125px;
+// left: 30px;
+}
+.triangle-down::after {
+  border-width: 0 13px 13px;
+  top: 3px;
+  left: -13px;
+  position: absolute;
+  display: block;
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent #fff;
 }

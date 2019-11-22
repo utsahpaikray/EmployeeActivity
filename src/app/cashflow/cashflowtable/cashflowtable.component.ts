@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 // tslint:disable-next-line: max-line-length
 import { DialogDialogOverviewExampleDialogComponent } from '../dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component';
+import { transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-cashflowtable',
@@ -15570,7 +15571,9 @@ openDialog(): void {
 }
 public expandCollapse(type) {
 if (type === 1) {
-  this.accountReceivable = this.accountReceivable ? false : true;
+  this.accountReceivable = this.accountReceivable ? false : true, transition('false: true', animate(1000));
+
+
   this.income = false;
   this.accountPayable = false;
   this.expense = false;

@@ -1,51 +1,38 @@
 <div class="popup-cashflow">
   <div class="Overrude-invoive">
-    <div class="icon">
-      <mat-icon class="close">close</mat-icon></div>
-      <p>Add Overrude Invoice</p>
-      <div class="tabs">
-         <button type="button" class="tabs-btn">1-30</button>
-         <button type="button " class="tabs-btn hover">31-60</button>
-         <button type="button" class="tabs-btn">61-90</button>
-         <button type="button" class="tabs-btn">91-180</button>
-         <button type="button" class="tabs-btn">181</button>
-      </div>
-       <div class="overrude-table">
-          <table>
-              <tr class="table-head">
-              <th >Name</th>
-              <th>invoice Number</th>
-              <th>Issue Date</th>
-              <th>Due Date</th>
-              <th>Balance</th>
-              <th></th>
-          </tr>
-          <tr>
-              <td>Willam Jonas</td>
-              <td>2097</td>
-              <td>09/07/2019</td>
-              <td>10/07/2019</td>
-              <td>$$15,23,56.10</td>
-              <td><button>Add User Projection</button> </td>
-          </tr>
-          <tr>
-                  <td>Willam Jonas</td>
-                  <td>2097</td>
-                  <td>09/07/2019</td>
-                  <td>10/07/2019</td>
-                  <td>$$15,23,56.10</td>
-                  <td> <button>Add User Projection</button></td>
-              </tr>
-              <tr>
-                      <td>Willam Jonas</td>
-                      <td>2097</td>
-                      <td>09/07/2019</td>
-                      <td>10/07/2019</td>
-                      <td>$$15,23,56.10</td>
-                      <td> <button>Add User Projection</button></td>
-                  </tr>
-          </table>
-      </div>
-       <div class="download"><button class="download-btn"><mat-icon class="download-icon-space">cloud_download</mat-icon>Download</button>  </div>
+    <mat-icon class="close">close</mat-icon>
+    <p>Add Overrude Invoice</p>
+    <div class="tabs">
+      <button type="button" class="tabs-btn" (click)= "dialogtable1(0)">1-30</button><span class="triangle-down"></span>
+      <button type="button " class="tabs-btn hover" (click)= "dialogtable1(1)">31-60</button>
+      <button type="button" class="tabs-btn" (click)= "dialogtable1(2)">61-90</button>
+      <button type="button" class="tabs-btn" (click)= "dialogtable1(3)">91-180</button>
+      <button type="button" class="tabs-btn" (click)= "dialogtable1(4)">181</button>
+    </div>
+    <div class="overrude-table">
+      <table>
+        <tr class="table-head">
+          <th>Name</th>
+          <th>invoice Number</th>
+          <th>Issue Date</th>
+          <th>Due Date</th>
+          <th>Balance</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let item of dialogtable;">
+          <td >{{item.ContactName}}</td>
+          <td >{{item.TransactionID}}</td>
+          <td >{{item.Date}}</td>
+          <td >{{item.DueDate}}</td>
+          <td >{{item.Balance}}</td>
+
+          <td><button>Add User Projection</button> </td>
+
+        </tr>
+      </table>
+    </div>
+    <div class="download"><button class="download-btn">
+        <mat-icon class="download-icon-space">cloud_download</mat-icon>Download
+      </button> </div>
   </div>
 </div>
