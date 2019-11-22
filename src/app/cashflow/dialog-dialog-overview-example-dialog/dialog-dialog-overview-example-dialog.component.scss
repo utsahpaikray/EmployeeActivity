@@ -1,218 +1,118 @@
 @import "src/variables/variable.scss";
 @import "src/variables/color.scss";
-.example-container {
-  height: 400px;
-  overflow: auto;
+.popup-cashflow {
+  // width: 962px;
+  // height: 400px;
+  // background: #FFFFFF 0% 0% no-repeat padding-box;
+  // border: 1px solid #707070;
+  // border-radius: 12px;
+  // opacity: 1;
+  // padding: 28px 33px;
 }
+  .Overrude-invoive p {
+      text-align: center;
+      font-size:30px;
+      letter-spacing: 0;
+      color: #00A3B8;
+      opacity: 1;
+      font-weight: 700;
+      padding-bottom: 46px;
 
-table {
-  width: 100%;
-}
-table{
-  border-collapse: collapse;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.defaultTable{
-  border: 2px solid $Tranquil;
-  background-color: $white;
-  overflow: hidden;
-  border-radius: 0.3rem;
-  position: relative;
-  overflow: auto;
-  .dataTable{
-      background-color: $white;
-
-      th, td{
-          border-left: 1px solid #ebf2f3;
-          border-right: 1px solid #ebf2f3;
-          padding: 0.6em 0.8em;
-
-          &:first-child{
-              border-left: none;
-          }
-
-          &:last-child{
-              border-right: none;
-          }
-      }
-
-      th{
-          background-color: $SummerSky;
-          color: $white;
-          font-size: 0.934em;
-          font-weight: 700;
-          border-color: $white;
-          position: relative;
-      }
-
-      .sort{
-          text-align: left;
-          padding-right: 2.2em;
-
-          .sortButton{
-              background: none;
-              border: none;
-              color: $white;
-              font-size: 1.2em;
-              position: absolute;
-              cursor: pointer;
-              right: 0;
-              padding: 0.4em 0.5em;
-            //  top: ~'calc(50% - 0.7em)';
-
-              i{
-                  padding: 0;
-                  display: block;
-              }
-          }
-      }
-
-      .sort.alnRight{
-          text-align: right;
-          padding-left: 2.2em;
-
-          .sortButton{
-              left: 0;
-          }
-      }
-
-      td{
-        font-size: 0.8rem;
-        color: $Dim-Gray;
-      }
-
-      .blueFont{
-          color: $Genoa;
-      }
-
-      .smallFont{
-          font-size: 0.73333em;
-      }
-      thead{
-          &.disable{
-              pointer-events: none;
-          }
-      }
-      tbody{
-          tr:nth-child(even){
-              td{
-                  background-color: $Lavender;
-              }
-          }
-
-          .borderCell{
-              border-top: 1px solid #ebf2f3;
-          }
-
-          td[rowspan]{
-              background-color: $white !important;
-          }
-      }
-
-      .boldText{
-          td{
-              font-weight: 800;
-          }
-      }
-      .text-right {
-        text-align: right;
-      }
   }
+   .tabs .tabs-btn{
+      background: #F5FBFC 0% 0% no-repeat padding-box;
+      border: 1px solid #D9ECEE;
+      border-radius: 30px;
+      opacity: 1;
+      font-size: 11px;
+      padding: 14px 26px;
+      color:#7BAAAA;
+      outline: none;
 
-  .tableFoot{
-      font-size: 1rem;
-      background-color: $Lavender;
-      height: 2.9em;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-
-      td{
-          padding: 0 0.8em;
-
-          &:first-child{
-              font-size: 0.87em;
-              color: $Genoa;
-              font-weight: 600;
-
-              i{
-                  display: inline-block;
-                  margin-right: 0.2em;
-                  font-size: 1.3em;
-                  margin-top: -0.1em;
-              }
-          }
-
-          &:last-child{
-              text-align: right;
-          }
-      }
-  }
-
-  .redFoot{
-      td{
-          &:first-child{
-              color: $Cinnabar;
-          }
-      }
-  }
-
-  .greenLabelFont{
-      color: $KellyGreen;
-  }
-
-  .redLabelFont{
-      color: $red;
-  }
-  &.withTableFoot{
-      padding-bottom: 2.9rem;
-  }
-      &.smallFontTable{
-          font-size: 0.9rem;
-
-          th, td{
-              padding: 0.8em;
-          }
-
-          th[colspan]{
-              border-bottom: 1px solid $white;
-          }
-      }
-  }
- .defaultTable .dataTable th {
-    font-size: .8rem;
-    background-color: #eff9fb;
-    color: #40c4d9;
-    border-color: #eff9fb;
+   }
+   .tabs-btn:focus{
+      background: #25BDD4!important;
+   color: white!important;
 }
-.defaultTable .dataTable thead tr th{
-  top: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 1;
+   .overrude-table{
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #D2D2D2;
+      border-radius: 20px;
+
+      height: 400px;
+      margin-top: 16px;
+   }
+   .overrude-table table{
+       width: 100%;
+       border-collapse: collapse;
+   }
+   overrude-table table,th:first-child{
+
+opacity:1;
+padding: 13px 59px 13px 12px;
+font-size: 12px;
+letter-spacing: 0;
+color: #005058;
+text-align: start;
+border-radius: 30px 0px 0px 30px;
 }
-.defaultTable .dataTable td .ellipsis{
-  width: 120px;
-}
-.defaultTable.sec-drilldown{
-  max-height: 80vh;
-  overflow-y: auto;
-  max-width: 80vw;
-}
-.qb-detail {
-  display: flex;
-  /* text-align: center; */
-  /* align-items: center; */
-  justify-content: space-around;
-}
-.text{
-  font-size: 13px;
-  padding-bottom: 20px;
+th:last-child{
+  border-radius: 0px 30px 30px 0px;
+
 }
 
 
+   th{
+      background: #DFF6FA 0% 0% no-repeat padding-box;
+      color: #005058;
+      font-size: 12px;
+      text-align: start;
 
+   }
+   .table-head{
+
+      border-radius: 30px;
+   }
+   td{
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0;
+      color: #00A3B8;
+      opacity: 1;
+      padding: 8px 0px 8px 4px;
+      border-bottom: 1px solid #0051583a;;
+   }
+   td button{
+       border-radius: 20px;
+       background: #78A9B1;
+       color: #ffff;
+       padding: 3px 11px;
+       border: none;
+       font-size: 11px;
+       margin-right: -49px;
+   }
+   .download-btn{
+   background: #25BDD4 0% 0% no-repeat padding-box;
+border-radius: 50px;
+opacity: 1;
+padding: 12px 36px 12px 0px ;
+color: white;
+border: none;
+text-align: center;
+   }
+   .download{
+       text-align: center;
+       margin-top: 17px;
+   }
+
+   .download-icon-space{
+     padding: 0px 11px 0px 33px;
+     font-size: 17px;
+   }
+   .icon {
+    display: block;
+    text-align: end;
+}
+.close{
+  border-radius: 30px;
+}

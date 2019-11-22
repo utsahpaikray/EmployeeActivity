@@ -15559,7 +15559,7 @@ ngOnInit() {
 }
 openDialog(): void {
   const dialogRef = this.dialog.open(DialogDialogOverviewExampleDialogComponent, {
-    width: '800px',
+    width: '962px',
     data: {name: this.name, animal: this.animal}
   });
 
