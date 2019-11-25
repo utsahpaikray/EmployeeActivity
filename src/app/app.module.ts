@@ -140,6 +140,7 @@ import { CashflowtableComponent } from './cashflow/cashflowtable/cashflowtable.c
 
 // tslint:disable-next-line: max-line-length
 import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component';
+import { CustomertransactionpopupComponent } from './cashflow/customertransactionpopup/customertransactionpopup.component';
 
 @NgModule({
   declarations: [
@@ -173,6 +174,7 @@ import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-di
     CashflowComponent,
     CashflowtableComponent,
     DialogDialogOverviewExampleDialogComponent,
+    CustomertransactionpopupComponent,
 
   ],
   imports: [
@@ -195,6 +197,7 @@ import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-di
     MatDatepickerModule,
     MatNativeDateModule
   ],
+  entryComponents:[CustomertransactionpopupComponent,DialogDialogOverviewExampleDialogComponent],
   providers: [SidenavService,
     MatDatepickerModule],
   bootstrap: [AppComponent]

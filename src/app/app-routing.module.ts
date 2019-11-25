@@ -1,5 +1,5 @@
 import {
-  NgModule
+  NgModule, Component
 } from '@angular/core';
 import {
   Routes,
@@ -41,7 +41,6 @@ import { PaypieDetailComponent } from './component/paypie-detail/paypie-detail.c
 import { CashflowComponent } from './component/cashflow/cashflow.component';
 import { CashflowtableComponent } from './cashflow/cashflowtable/cashflowtable.component';
 // tslint:disable-next-line: max-line-length
-import { DialogDialogOverviewExampleDialogComponent } from './cashflow/dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -62,10 +61,7 @@ const routes: Routes = [
         path: 'report',
         component: ReportComponent
       },
-      {
-        path: 'dialogbox',
-        component: DialogDialogOverviewExampleDialogComponent
-      },
+
       {
         path: 'cashflow',
         component: CashflowComponent
@@ -74,6 +70,7 @@ const routes: Routes = [
         path: 'maincontent',
         component: MaincontentComponent
       },
+
       {
         path: 'paypie',
         component: PaypieComponent

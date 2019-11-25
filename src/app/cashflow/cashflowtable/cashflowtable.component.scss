@@ -2,7 +2,9 @@ html,
 body {
   height: 100%;
 }
-
+.main-cashflow-table{
+  padding: 20px 52px;
+}
 .container {
   width: 100%;
   background: #49a8b4;
@@ -15,7 +17,7 @@ body {
     background: white;
     // border-radius: 21px;
     box-shadow: 0 14px 28px rgba(104, 104, 104, 0.25), 0 10px 10px 9px rgba(59, 39, 39, 0.22);
-
+    padding: 20px 2px;
 
 
     overflow: hidden;
@@ -28,18 +30,17 @@ body {
       overflow: auto;
       height: 90vh;
       position: relative;
+      border: 1px solid #D2D2D2;
+
 
 
       span.active {
-
-        padding: 4px 14px 3px 13px !important;
+        // padding: 4px 13px 3px 13px; ;
         background: #ffffff61 0% 0% no-repeat padding-box;
         border: 1px solid #7d9ba0;
         border-radius: 50px;
         z-index: 0;
         margin-left: 21px;
-
-
       }
     }
 
@@ -49,10 +50,10 @@ body {
     }
 
     .cleandar-detail-view {
-      width: 246px;
+      width: 219px;
       background: #00A3B8 0% 0% no-repeat padding-box;
       border-radius: 50px;
-      height: 48px;
+      height: 42px;
       opacity: 1;
       display: flex;
       align-items: center;
@@ -66,7 +67,7 @@ body {
 
       .Detail {
         width: 114px;
-        height: 35px;
+        height: 42px;
         background: #0090A2 0% 0% no-repeat padding-box;
         border-radius: 50px;
         opacity: 1;
@@ -78,14 +79,18 @@ body {
 
       & li.view-show-list-style {
         list-style-type: none;
-        padding-left: 10px;
+        padding: 13px;
+        text-align: center;
 
 
-        a {
+        span {
           text-decoration: none;
           font: Semibold 11px/20px Open Sans;
           color: #fff;
           font-size: 11px;
+          padding-left: 5px;
+
+          vertical-align: middle;
 
         }
 
@@ -99,11 +104,10 @@ body {
       border-radius: 50px;
       opacity: 1;
       float: left;
-      margin-left: 10px;
-      width: 641px;
+      width: 750px;
       font-size: 11px;
       color: #0d5960;
-
+      height: 42px;
 
       mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
         font-size: 17px;
@@ -119,24 +123,26 @@ body {
         & .date-section {
           list-style-type: none;
 
-          a {
-            text-align: left;
-            font: Semibold 11px/20px Open Sans;
+          span {
+
             letter-spacing: 0;
             color: #005058;
             opacity: 1;
             text-decoration: none;
+
             font-size: 11px;
-            padding-right: 16px;
+            font-weight: 600;
+            text-align: center;
+            vertical-align: middle;
+
 
           }
         }
       }
 
       .actual {
-        top: 793px;
-        left: 751px;
-        width: 352px;
+
+        width: 370px;
         height: 42px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 1px solid #D2D2D2;
@@ -151,10 +157,10 @@ body {
           color: #005058;
         }
 
-        & .atual-start {
+        &.atual-start {
           list-style-type: none;
 
-          & a {
+          span {
 
             text-decoration: none;
             font-size: 11px;
@@ -175,10 +181,10 @@ body {
       justify-content: flex-end;
       cursor: pointer;
 
-      & .full {
+      &.full {
         list-style-type: none;
 
-        a {
+       span {
           text-align: left;
           font: Semibold 11px/20px Open Sans;
           letter-spacing: 0;
@@ -188,21 +194,24 @@ body {
 
           text-decoration: none;
           padding-right: 16px;
+    vertical-align: middle;
+    font-size: 11px;
         }
       }
 
     }
 
     .Scaniore-analysis {
-      width: 187px;
+      width: 198px;
       height: 42px;
       background: #005058 0% 0% no-repeat padding-box;
       border-radius: 50px;
       opacity: 1;
       list-style-type: none;
       border: none;
-      margin-left: 17px;
-      margin-left: 33px;
+      margin-left: 5px;
+      margin-left: 11px;
+      text-align: center;
 
       mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
         font-size: 17px;
@@ -210,15 +219,17 @@ body {
         padding-left: 16px;
       }
 
-      & a {
+      span {
         text-align: left;
-        font: Semibold 13px/20px Open Sans;
-        letter-spacing: 0;
-        color: #FFFFFF;
-        opacity: 1;
-        text-decoration: none;
-        font-size: 13px;
-        padding-right: 16px;
+    font: Semibold 13px/20px Open Sans;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+    text-decoration: none;
+    font-size: 13px;
+    padding-right: 16px;
+    vertical-align: middle;
+    font-size: 13px;
       }
     }
 
@@ -239,14 +250,25 @@ body {
     }
 
     .space1 {
-      padding: 15px 0px 15px 16px !important;
+      padding: 15px 0px 15px 26px ;
     }
 
-    .space {
-      padding: 15px 0px 15px 32px;
-      font-size: 12px;
+    .space-daily {
+       padding: 15px 35px 15px 35px;
+      font-size: 13px;
       cursor: pointer;
     }
+    .space-week {
+      padding: 15px 35px 15px 35px;
+     font-size: 13px;
+     cursor: pointer;
+   }
+   .space-month {
+    padding: 15px 35px 15px 35px;
+   font-size: 13px;
+   cursor: pointer;
+ }
+
 
     .date-space {
       padding: 16px 0px 15px 30px;
@@ -260,8 +282,18 @@ body {
     }
 
     .arrow {
-      padding: 15px 20px 15px 50px;
+      padding: 3px 0px 3px 6px;
       color: white;
+      background: #00a3b8;
+      border-radius: 50%;
+      padding: -1px;
+      font-size: 13px;
+      height: 16px;
+      width: 16px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 700;
 
 
     }
@@ -311,7 +343,7 @@ body {
     }
 
     mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
-      font-size: 23px;
+
       cursor: pointer;
     }
 
@@ -451,14 +483,14 @@ body {
       font-weight: 500;
       height: 40px;
       font-size: 12px;
-      z-index: 9999999999;
+      z-index: 999;
       // z-index: 222;
 
     }
 
     td.left-scroll.top-fixed-third-tr.cashin1 {
       height: 34px;
-      z-index: 99999999999;
+      z-index: 999;
     }
 
     span.income-space {
@@ -467,10 +499,12 @@ body {
 
     span.cashin-space-border {
       padding: 5px 175px 5px 32px;
-      color: #00A3B8;
+
       font-size: 13px;
       width: 88px;
       color: #005058;
+      font-size: 13px;
+      font-weight: 600;
 
     }
 
@@ -486,20 +520,22 @@ body {
       // padding-left: 42px;
       padding-top: 10px;
       color: #005058;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 12px;
     }
 
     span.Accoumt-space {
       // padding: 7px 18px 0px 5px;
       border-bottom: 1px solid #7B8F94;
-
-      font-size: 11px;
+    font-size: 11px;
+    color: #6F8488;
     }
 
     span.customer-sapce {
-      padding: 7px 80px 1px 6px;
+      padding: 7px 80px 0px 6px;
       border-bottom: 1px solid #7B8F94;
+      font-size: 11px;
+    color: #6F8488;
     }
 
     .white1 {
@@ -517,7 +553,7 @@ body {
     }
 
     td.top-fixed-third-tr.color {
-      z-index: 999999999;
+      z-index: 999;
     }
 
     td.white {
@@ -545,7 +581,7 @@ body {
 
     td.dym-dates {
       width: 344px;
-      z-index: 99999999;
+      z-index: 999;
       // border-top-left-radius: 30px;
       // border-bottom-left-radius: 30px;
       background: #e7f3f5;
@@ -588,10 +624,10 @@ body {
       background: #E7F3F5;
     }
 
-    .arrow {
-      padding-left: 22px;
-      font-size: 16px;
-    }
+    // .arrow {
+    //   padding-left: 22px;
+    //   font-size: 16px;
+    // }
 
     tr.left-scroll {
       height: 34px;
@@ -631,7 +667,7 @@ body {
     td.date-data {
       color: #005058;
       // background: #E7F3F5;
-      z-index: 9999999;
+      z-index: 999;
 
       height: 51px;
 
@@ -682,20 +718,20 @@ body {
       position: sticky;
       top: 90px;
       z-index: 99;
-      background: white;
+      background: #f9f9f9;
     }
 
     .top-fixed-fourth-tr {
       position: sticky;
       top: 125px;
-      z-index: 999999;
+      z-index: 999;
     }
 
     .top-fixed-fifth-tr {
       position: sticky;
       top: 169px;
-      z-index: 999999;
-      background: white;
+      z-index: 999;
+      background: #f9f9f9;
     }
 
     td.td7.left-scroll.Top-scroll-first-tr {
@@ -708,7 +744,7 @@ body {
 
     .border {
       // z-index: 9999999;
-      background: white;
+      background: #f9f9f9;
 
     }
 
@@ -740,18 +776,19 @@ body {
     }
 
     span.account-receviavle-space {
-      padding: 0px 90px 2px 0px;
-      border-bottom: 2px solid #005058;
+      padding: 0px 175px 2px 0px;
+      border-bottom: 1px solid #005058;
+      color: #005058;
     }
 
     span.income-space {
-      padding: 0px 100px 2px 1px;
-      border-bottom: 2px solid #005058;
+      padding: 0px 175px 2px 0px;
+      border-bottom: 1px solid #005058;
     }
 
     .span.Accoumt-space {
       padding: 0px 80px 6px 1px;
-      border-bottom: 2px solid #999999;
+      border-bottom: 1px solid #999999;
     }
 
     .icons {
@@ -793,7 +830,7 @@ body {
     }
 
     .active {
-      padding: 4px 14px 3px 13px !important;
+      padding: 4px 12px 3px 15px;
       background: #ffffff61 0% 0% no-repeat padding-box;
       border: 1px solid #7d9ba0;
       border-radius: 50px;
@@ -839,8 +876,8 @@ body {
 
 }
 
-.cleandar-view {
-  width: 338px;
+.cleandar-view[_ngcontent-c18] {
+  width: 266px;
 }
 
 .Scaniore-analysis {
@@ -867,11 +904,14 @@ body {
 }
 
 span.account-receviavle-space.top-fixed-fourth-tr.income-bottom-border {
-  padding: 0px 160px 2px 0px !important;
+  padding: 0px 245px 2px 0px !important;
 }
-
+.expense-bottom-border{
+  padding: 0px 240px 2px 0px !important;
+}
 span.sub-coa {
   padding-left: 66px;
+  font-size: 11px;
 }
 
 td.left-scroll.top-fixed-third-tr.border.text.coa {
@@ -879,8 +919,9 @@ td.left-scroll.top-fixed-third-tr.border.text.coa {
   padding-left: 55px;
   position: sticky;
   top: 189px;
-  background: white;
+  background: #f9f9f9;
   z-index: 100;
+  font-size: 11px;
 
 }
 
@@ -894,14 +935,16 @@ td.left-scroll.top-fixed-third-tr.border.text.coa {
 //   min-width: 60px;
 // }
 .icon1 {
-  max-width: 27px;
+  max-width: 28px;
+  background: #f9f9f9;
+  min-width: 28px;
 }
 
 .service-income {
   padding-bottom: 5px;
   position: sticky;
   top: 193px;
-  background: white;
+  background: #f9f9f9;
   z-index: 100;
 }
 
@@ -911,10 +954,12 @@ td.left-scroll.top-fixed-third-tr.border.text.coa {
 
 .icon-space {
   min-width: 29px !important;
+  background: #f9f9f9;
 }
 
 .icon-space-sub {
   max-width: 30px !important;
+  background: #f9f9f9;
 }
 
 .coa1 {
@@ -953,7 +998,9 @@ label {
   min-height: 19px;
   display: block;
 }
-
+td.background {
+  background: #f9f9f9;
+}
 .form-edit {
   td {
     max-width: 120px;
@@ -984,11 +1031,11 @@ label {
 }
 
 .add-transaction {
-
-  background: #e7f3f5;
   padding-top: 16px;
   padding-left: 26px;
   border-top: 1px solid lightgrey;
+  background: #F9F9F9;
+  padding-bottom: 13px;
 }
 
 .customer-padding {
@@ -1009,7 +1056,7 @@ label {
   position: absolute;
   top:58px;
   z-index: 100;
-  z-index: 999999999999;
+  z-index: 999;
   left: 51%;
 
   .last-download {
@@ -1021,9 +1068,110 @@ label {
   }
 }
 .td-min-width{
-  min-width: 80px;
-  max-width: 80px;
+  min-width: 60px;
+  max-width: 60px;
 }
 .add{
   transition: all 1s linear;
+}
+.hover{
+  background: #00A3B8!important;
+}
+
+button.edit-options:hover {
+    background: #40c4d9;
+    color: #fff;
+}
+button.edit-options{
+width: 100%;
+    background: 0 0;
+    height: 36px;
+    float: right;
+    border-radius: 0;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #e9f3f4;
+    color: #ccc;
+}
+td.left-scroll.customer-names {
+  padding-top: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.customer-trans{
+  border-bottom: 1px solid lightgray;
+  background: #f9f9f9;
+}
+.account-pay{
+  padding: 0px 184px 2px 0px!important;
+}
+.max-font-size{
+  font-size: 12px;
+  font-weight: 600;
+}
+.max-font-size-date{
+  font-size: 12px;
+  color: #005058;
+}
+.max-font-size-tranaction{
+  font-size: 12px;
+  color: #00A3B8;
+  min-width: 60px;
+}
+//font-style-setting
+
+i.icon-calender1 {
+  font-size: 17px;
+  color: #005058;
+
+}
+i.icon-cash-flow {
+  font-size: 21px;
+}
+i.icon-system-actual{
+  font-size: 21px;
+}
+i.icon-user-forecasted{
+  font-size: 21px
+}
+  i.icon-full-screen{
+font-size: 21px;
+
+}
+i.icon-bar-line-arrow-graph{
+  font-size: 17px;
+    color: white;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+i.arrow-filled{
+  font-size: 20px;
+  color: #00A3B8;
+}
+i.size.icon-plus-circle.ng-tns-c18-9.ng-star-inserted {
+  font-size: 12px;
+  color: #005058;
+  padding-left: 29px;
+}
+i.size.icon-circle-minus.ng-tns-c18-9.ng-star-inserted{
+  font-size: 12px;
+  color: #005058;
+  padding-left: 29px;
+}
+li.date-section {
+  padding: 26px;
+}
+i.icon-list {
+  color: white;
+  font-size: 17px;
+  padding-left: 7px;
+}
+i.icon-collapse {
+  color: white;
+  font-size: 18px;
+}
+li.full {
+  padding-left: 31px;
+}
+.length{
+  font-size: 13px !important;
 }

@@ -2,12 +2,35 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 // tslint:disable-next-line: max-line-length
 import { DialogDialogOverviewExampleDialogComponent } from '../dialog-dialog-overview-example-dialog/dialog-dialog-overview-example-dialog.component';
-import { transition, animate } from '@angular/animations';
-
+import { transition, animate, trigger, style } from '@angular/animations';
+import { CustomertransactionpopupComponent } from '../customertransactionpopup/customertransactionpopup.component';
 @Component({
   selector: 'app-cashflowtable',
   templateUrl: './cashflowtable.component.html',
-  styleUrls: ['./cashflowtable.component.scss']
+  styleUrls: ['./cashflowtable.component.scss'],
+  animations: [
+    trigger(
+      'inOutAnimation',
+      [
+        transition(
+          ':enter',
+          [
+            style({  opacity: 0 }),
+            animate('1s ease-out',
+                    style({ opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ opacity: 1 }),
+            animate('0.5s ease-in',
+                    style({ opacity: 0 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 
 
@@ -15512,7 +15535,7 @@ ngOnInit() {
   }
 
   // Next arrow event
-  DWMNextEvent() {
+  DWMNextEvent(option) {
     if (this.EventOption === 0){
     this.openingBalance = this.cashflowNext.openiningBalance;
     this.closingBalance = this.cashflowNext.closingBalance;
@@ -15536,7 +15559,7 @@ ngOnInit() {
 }
 
   // previous arrow event
-    DWMPreviousEvent() {
+    DWMPreviousEvent(option) {
       if (this.EventOption === 0){
         this.openingBalance = this.cashflow.openiningBalance;
         this.closingBalance = this.cashflow.closingBalance;
@@ -15561,6 +15584,17 @@ ngOnInit() {
 openDialog(): void {
   const dialogRef = this.dialog.open(DialogDialogOverviewExampleDialogComponent, {
     width: '962px',
+    data: {name: this.name, animal: this.animal}
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+    this.animal = result;
+  });
+}
+public customerTransaction(){
+  const dialogRef = this.dialog.open(CustomertransactionpopupComponent, {
+    width: '80vw',
     data: {name: this.name, animal: this.animal}
   });
 
